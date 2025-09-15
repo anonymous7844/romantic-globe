@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Romantic Globe</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#9c27b0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+  <header class="header">
+    <h1 class="logo">🌎 Romantic Globe</h1>
+    <nav class="header__nav">
+      <button id="btn-day-night" class="btn" aria-label="Alternar tema">🌙</button>
+      <button id="btn-favorites" class="btn" aria-label="Favoritos">❤️ <span id="badge-favorites">0</span></button>
+      <button id="btn-achievements" class="btn" aria-label="Conquistas">🏆</button>
+      <button id="btn-reset" class="btn" aria-label="Resetar progresso">🔄</button>
+      <button id="btn-unlock" class="btn" aria-label="Desbloquear tudo">🔓</button>
+      <button id="btn-route" class="btn" aria-label="Rota">📍</button>
+    </nav>
+  </header>
+
+  <!-- Barra de progresso/conquistas -->
+  <div class="progress">
+    <div id="progress-bar" class="progress__bar"></div>
+  </div>
+  <div id="progress-text" class="progress__text">0/0 desbloqueados</div>
+
+  <!-- Container do globo -->
+  <main id="globe-container" class="globe-container">
+    <div id="globe-loading" class="loading">Carregando globo...</div>
+  </main>
+
+  <!-- Modal lugar -->
+  <div id="modal-place" class="modal" aria-hidden="true" hidden>
+    <div class="modal__content fade-in">
+      <button class="modal__close" aria-label="Fechar">×</button>
+      <h2 id="modal-title" class="modal__title"></h2>
+      <img id="modal-image" class="modal__image" alt="">
+      <p id="modal-description" class="modal__description"></p>
+      <div class="modal__actions">
+        <button id="btn-favorite" class="btn btn--primary">❤️ Favoritar</button>
+        <button id="btn-share" class="btn btn--secondary">📋 Compartilhar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal desafio -->
+  <div id="modal-challenge" class="modal" aria-hidden="true" hidden>
+    <div class="modal__content fade-in">
+      <button class="modal__close" aria-label="Fechar">×</button>
+      <h2 id="challenge-title" class="modal__title"></h2>
+      <div id="challenge-body" class="modal__challenge-body"></div>
+    </div>
+  </div>
+
+  <!-- Toasts -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.error('SW erro', err));
+    }
+  </script>
+</body>
+</html>
