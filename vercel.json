@@ -11,20 +11,13 @@
     { "src": "api/unsplash.js", "use": "@vercel/node" },
     { "src": "api/deepseek.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    {
-      "src": "/api/unsplash",
-      "dest": "/api/unsplash.js"
-    },
-    {
-      "src": "/api/deepseek",
-      "dest": "/api/deepseek.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+
+  "rewrites": [
+    { "source": "/api/unsplash", "destination": "/api/unsplash.js" },
+    { "source": "/api/deepseek", "destination": "/api/deepseek.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
+
   "headers": [
     {
       "source": "/(.*)\\.(css|js|png|jpg|jpeg|gif|webp|svg)$",
