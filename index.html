@@ -4,68 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Romantic Globe</title>
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#9c27b0">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0d0d25">
 </head>
 <body data-theme="dark">
-
-  <header class="header">
-    <h1 class="logo">🌎 Romantic Globe</h1>
-    <nav class="header__nav">
-      <button id="btn-day-night" class="btn" aria-label="Alternar tema">🌙</button>
-      <button id="btn-favorites" class="btn" aria-label="Favoritos">❤️ <span id="badge-favorites">0</span></button>
-      <button id="btn-achievements" class="btn" aria-label="Conquistas">🏆</button>
-      <button id="btn-reset" class="btn" aria-label="Resetar progresso">🔄</button>
-      <button id="btn-unlock" class="btn" aria-label="Desbloquear tudo">🔓</button>
-      <button id="btn-route" class="btn" aria-label="Rota">📍</button>
+  <!-- Header fixo e translúcido -->
+  <header class="app-header">
+    <div class="logo">
+      <span class="emoji">🌍</span>
+      <h1>Romantic Globe</h1>
+    </div>
+    <nav class="top-menu">
+      <button class="btn-icon" id="btn-day-night" title="Alternar tema">🌙</button>
+      <button class="btn-icon" id="btn-favorites" title="Favoritos">❤️ <span id="badge-favorites">0</span></button>
+      <button class="btn-icon" id="btn-achievements" title="Conquistas">🏆</button>
+      <button class="btn-icon" id="btn-reset" title="Resetar progresso">🔄</button>
     </nav>
   </header>
 
-  <!-- Barra de progresso/conquistas -->
-  <div class="progress">
-    <div id="progress-bar" class="progress__bar"></div>
-  </div>
-  <div id="progress-text" class="progress__text">0/0 desbloqueados</div>
+  <!-- Área do globo -->
+  <main>
+    <div id="globe-container" class="globe-wrapper">
+      <div id="globe-loading" class="loading">Carregando globo…</div>
+    </div>
 
-  <!-- Container do globo -->
-  <main id="globe-container" class="globe-container">
-    <div id="globe-loading" class="loading">Carregando globo...</div>
+    <!-- Barra de progresso -->
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+      <span id="progress-text"></span>
+    </div>
   </main>
 
   <!-- Modal lugar -->
-  <div id="modal-place" class="modal" aria-hidden="true" hidden>
-    <div class="modal__content fade-in">
-      <button class="modal__close" aria-label="Fechar">×</button>
-      <h2 id="modal-title" class="modal__title"></h2>
-      <img id="modal-image" class="modal__image" alt="">
-      <p id="modal-description" class="modal__description"></p>
+  <div id="modal-place" class="modal" hidden aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Fechar">✖</button>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" alt="" class="modal__image">
+      <p id="modal-description"></p>
       <div class="modal__actions">
-        <button id="btn-favorite" class="btn btn--primary">❤️ Favoritar</button>
-        <button id="btn-share" class="btn btn--secondary">📋 Compartilhar</button>
+        <button id="btn-favorite" class="btn btn--primary">Favoritar</button>
+        <button id="btn-share" class="btn btn--secondary">Compartilhar</button>
       </div>
     </div>
   </div>
 
   <!-- Modal desafio -->
-  <div id="modal-challenge" class="modal" aria-hidden="true" hidden>
-    <div class="modal__content fade-in">
-      <button class="modal__close" aria-label="Fechar">×</button>
-      <h2 id="challenge-title" class="modal__title"></h2>
-      <div id="challenge-body" class="modal__challenge-body"></div>
+  <div id="modal-challenge" class="modal" hidden aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Fechar">✖</button>
+      <h3 id="challenge-title"></h3>
+      <div id="challenge-body"></div>
     </div>
   </div>
 
   <!-- Toasts -->
-  <div id="toast-container" class="toast-container"></div>
+  <div id="toast-container"></div>
 
-  <script type="module" src="app.js"></script>
+  <!-- Bibliotecas Globe / Three -->
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('Service Worker registrado'))
-        .catch(err => console.error('SW erro', err));
-    }
+    // Promise resolvida para o app.js saber que libs já estão carregadas
+    window.loadGlobeLibs = () => Promise.resolve();
   </script>
+
+  <!-- App principal -->
+  <script type="module" src="app.js"></script>
 </body>
 </html>
