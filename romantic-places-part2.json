@@ -1,0 +1,335 @@
+[
+  {
+    "id": "buenosaires_gardensecret",
+    "name": "Jardim Japonês - Buenos Aires",
+    "lat": -34.5723,
+    "lng": -58.4116,
+    "challenge": {
+      "type": "riddle",
+      "question": "Um pedacinho do Japão na América, sou tranquilo e cheio de carpas. Quem sou?",
+      "answer": "Jardim Japonês"
+    }
+  },
+  {
+    "id": "capeverde_beach",
+    "name": "Praia Dourada - Cabo Verde",
+    "lat": 16.5388,
+    "lng": -23.0418,
+    "challenge": {
+      "type": "password",
+      "question": "Digite nossa palavra do verão de 2023",
+      "answer": "Sol"
+    }
+  },
+  {
+    "id": "berlin_wallart",
+    "name": "Muro de Berlim - Arte",
+    "lat": 52.5076,
+    "lng": 13.4540,
+    "challenge": {
+      "type": "quiz",
+      "question": "Qual cor de grafite mais te marcou aqui?",
+      "options": ["Azul", "Amarelo", "Vermelho"],
+      "answer": "Amarelo"
+    }
+  },
+  {
+    "id": "moscow_redsquare",
+    "name": "Praça Vermelha - Moscou",
+    "lat": 55.7539,
+    "lng": 37.6208,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a palavra que descreveu a neve",
+      "answer": "Mágica"
+    }
+  },
+  {
+    "id": "stockholm_archipelago",
+    "name": "Arquipélago - Estocolmo",
+    "lat": 59.3293,
+    "lng": 18.0686,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou feito de muitas ilhas, frio mas acolhedor. Quem sou?",
+      "answer": "Arquipélago"
+    }
+  },
+  {
+    "id": "zurich_chocolate",
+    "name": "Loja de Chocolate - Zurique",
+    "lat": 47.3732,
+    "lng": 8.5453,
+    "challenge": {
+      "type": "quiz",
+      "question": "Qual sabor de chocolate compramos?",
+      "options": ["Ao leite", "Amargo", "Branco"],
+      "answer": "Ao leite"
+    }
+  },
+  {
+    "id": "singapore_gardens",
+    "name": "Gardens by the Bay - Singapura",
+    "lat": 1.2816,
+    "lng": 103.8636,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene nosso passeio: ",
+      "options": ["Árvore Supertree", "Estufa de Flores", "Caminho Suspenso"],
+      "answer": ["Árvore Supertree", "Caminho Suspenso", "Estufa de Flores"]
+    }
+  },
+  {
+    "id": "newzealand_milford",
+    "name": "Milford Sound - Nova Zelândia",
+    "lat": -44.6167,
+    "lng": 167.8667,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um fiorde majestoso com cachoeiras, quem sou?",
+      "answer": "Milford Sound"
+    }
+  },
+  {
+    "id": "iceland_blue_lagoon",
+    "name": "Blue Lagoon - Islândia",
+    "lat": 63.8790,
+    "lng": -22.4495,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a cor da lagoa",
+      "answer": "Azul"
+    }
+  },
+  {
+    "id": "egypt_valley",
+    "name": "Vale dos Reis - Egito",
+    "lat": 25.7402,
+    "lng": 32.6014,
+    "challenge": {
+      "type": "quiz",
+      "question": "Quem repousa aqui?",
+      "options": ["Faraós", "Deuses", "Guerreiros"],
+      "answer": "Faraós"
+    }
+  },
+
+  {
+    "id": "chile_atacama",
+    "name": "Deserto do Atacama - Chile",
+    "lat": -23.2413,
+    "lng": -68.9297,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou o deserto mais seco do mundo, quem sou?",
+      "answer": "Atacama"
+    }
+  },
+  {
+    "id": "norway_northernlights",
+    "name": "Aurora Boreal - Noruega",
+    "lat": 69.6496,
+    "lng": 18.9560,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a cor principal que vimos no céu",
+      "answer": "Verde"
+    }
+  },
+  {
+    "id": "finland_igloo",
+    "name": "Igloo Hotel - Finlândia",
+    "lat": 68.9707,
+    "lng": 27.0045,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene nosso dia no hotel igloo",
+      "options": ["Check-in", "Banho quente", "Aurora"],
+      "answer": ["Check-in", "Aurora", "Banho quente"]
+    }
+  },
+  {
+    "id": "india_tajmahal",
+    "name": "Taj Mahal - Índia",
+    "lat": 27.1751,
+    "lng": 78.0421,
+    "challenge": {
+      "type": "quiz",
+      "question": "Quem construiu este monumento de amor?",
+      "options": ["Shah Jahan", "Akbar", "Babur"],
+      "answer": "Shah Jahan"
+    }
+  },
+  {
+    "id": "usa_route66",
+    "name": "Route 66 - EUA",
+    "lat": 35.4676,
+    "lng": -97.5164,
+    "challenge": {
+      "type": "password",
+      "question": "Digite o número da rota",
+      "answer": "66"
+    }
+  },
+  {
+    "id": "peru_rainbowmountain",
+    "name": "Montanha Arco-Íris - Peru",
+    "lat": -13.8697,
+    "lng": -71.3022,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou uma montanha colorida, quem sou?",
+      "answer": "Montanha Arco-Íris"
+    }
+  },
+  {
+    "id": "canada_banf",
+    "name": "Lago Moraine - Banff",
+    "lat": 51.3217,
+    "lng": -116.1860,
+    "challenge": {
+      "type": "quiz",
+      "question": "Qual foi o primeiro animal que vimos aqui?",
+      "options": ["Urso", "Alce", "Águia"],
+      "answer": "Alce"
+    }
+  },
+  {
+    "id": "thailand_phi",
+    "name": "Ilhas Phi Phi - Tailândia",
+    "lat": 7.7397,
+    "lng": 98.7792,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a palavra que descreveu o mar",
+      "answer": "Cristalino"
+    }
+  },
+  {
+    "id": "kenya_masai",
+    "name": "Safari Masai Mara - Quênia",
+    "lat": -1.4061,
+    "lng": 35.0140,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene os animais que vimos",
+      "options": ["Leão", "Girafa", "Elefante"],
+      "answer": ["Girafa", "Leão", "Elefante"]
+    }
+  },
+
+  {
+    "id": "france_loire",
+    "name": "Castelo do Loire - França",
+    "lat": 47.4136,
+    "lng": 0.7039,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um castelo no vale dos reis franceses, quem sou?",
+      "answer": "Loire"
+    }
+  },
+  {
+    "id": "switzerland_matterhorn",
+    "name": "Matterhorn - Suíça",
+    "lat": 45.9763,
+    "lng": 7.6586,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a altitude aproximada (metros)",
+      "answer": "4478"
+    }
+  },
+  {
+    "id": "mexico_chichen",
+    "name": "Chichén Itzá - México",
+    "lat": 20.6843,
+    "lng": -88.5678,
+    "challenge": {
+      "type": "quiz",
+      "question": "A quem este templo é dedicado?",
+      "options": ["Kukulcán", "Quetzalcoatl", "Chaac"],
+      "answer": "Kukulcán"
+    }
+  },
+  {
+    "id": "australia_whitsundays",
+    "name": "Praia Whitehaven - Austrália",
+    "lat": -20.2827,
+    "lng": 149.0370,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou areia branca mais fina que pó, quem sou?",
+      "answer": "Whitehaven"
+    }
+  },
+  {
+    "id": "greece_meteora",
+    "name": "Mosteiros de Meteora - Grécia",
+    "lat": 39.7210,
+    "lng": 21.6319,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene os mosteiros que visitamos",
+      "options": ["Varlaam", "Rousanou", "Santo Estêvão"],
+      "answer": ["Rousanou", "Varlaam", "Santo Estêvão"]
+    }
+  },
+  {
+    "id": "southafrica_cape",
+    "name": "Cabo da Boa Esperança - África do Sul",
+    "lat": -34.3573,
+    "lng": 18.4716,
+    "challenge": {
+      "type": "password",
+      "question": "Digite o sentimento que tivemos aqui",
+      "answer": "Esperança"
+    }
+  },
+  {
+    "id": "indonesia_borobudur",
+    "name": "Templo Borobudur - Indonésia",
+    "lat": -7.6079,
+    "lng": 110.2038,
+    "challenge": {
+      "type": "quiz",
+      "question": "Qual religião é praticada neste templo?",
+      "options": ["Budismo", "Hinduísmo", "Cristianismo"],
+      "answer": "Budismo"
+    }
+  },
+  {
+    "id": "china_greatwall",
+    "name": "Grande Muralha - China",
+    "lat": 40.4319,
+    "lng": 116.5704,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou tão longo que me veem do espaço, quem sou?",
+      "answer": "Muralha"
+    }
+  },
+  {
+    "id": "usa_yosemite",
+    "name": "Parque Yosemite - EUA",
+    "lat": 37.8651,
+    "lng": -119.5383,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene as trilhas que fizemos",
+      "options": ["Mirror Lake", "Half Dome", "Vernal Falls"],
+      "answer": ["Mirror Lake", "Vernal Falls", "Half Dome"]
+    }
+  },
+  {
+    "id": "morocco_marrakesh",
+    "name": "Mercado de Marrakesh - Marrocos",
+    "lat": 31.6295,
+    "lng": -7.9811,
+    "challenge": {
+      "type": "password",
+      "question": "Digite o cheiro que sentimos no mercado",
+      "answer": "Especiarias"
+    }
+  }
+]
