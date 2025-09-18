@@ -3,45 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Romantic Globe</title>
-  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <title>Mapa Romântico</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0d0d25">
+  <link rel="manifest" href="manifest.json">
+  <!-- libs para o globo 3D -->
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
 </head>
 <body data-theme="dark">
-  <!-- Header fixo e translúcido -->
-  <header class="app-header">
-    <div class="logo">
-      <span class="emoji">🌍</span>
-      <h1>Romantic Globe</h1>
+  <header class="header">
+    <h1 class="logo">Mapa Romântico</h1>
+    <div class="controls">
+      <button id="btn-day-night" class="btn">🌗</button>
+      <button id="btn-favorites" class="btn">❤️ <span id="badge-favorites">0</span></button>
+      <button id="btn-achievements" class="btn">🏅</button>
+      <button id="btn-reset" class="btn">🔄</button>
+      <button id="btn-unlock" class="btn">🔓</button>
     </div>
-    <nav class="top-menu">
-      <button class="btn-icon" id="btn-day-night" title="Alternar tema">🌙</button>
-      <button class="btn-icon" id="btn-favorites" title="Favoritos">❤️ <span id="badge-favorites">0</span></button>
-      <button class="btn-icon" id="btn-achievements" title="Conquistas">🏆</button>
-      <button class="btn-icon" id="btn-reset" title="Resetar progresso">🔄</button>
-    </nav>
   </header>
 
-  <!-- Área do globo -->
-  <main>
-    <div id="globe-container" class="globe-wrapper">
-      <div id="globe-loading" class="loading">Carregando globo…</div>
-    </div>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <span id="progress-text"></span>
+  </div>
 
-    <!-- Barra de progresso -->
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-      <span id="progress-text"></span>
-    </div>
-  </main>
+  <div id="globe-container">
+    <div id="globe-loading">Carregando globo…</div>
+  </div>
 
-  <!-- Modal lugar -->
+  <!-- Modal Lugar -->
   <div id="modal-place" class="modal" hidden aria-hidden="true">
     <div class="modal__content">
-      <button class="modal__close" aria-label="Fechar">✖</button>
+      <button class="modal__close">&times;</button>
       <h2 id="modal-title"></h2>
-      <img id="modal-image" alt="" class="modal__image">
+      <img id="modal-image" alt="">
       <p id="modal-description"></p>
       <div class="modal__actions">
         <button id="btn-favorite" class="btn btn--primary">Favoritar</button>
@@ -50,27 +46,24 @@
     </div>
   </div>
 
-  <!-- Modal desafio -->
+  <!-- Modal Desafio -->
   <div id="modal-challenge" class="modal" hidden aria-hidden="true">
     <div class="modal__content">
-      <button class="modal__close" aria-label="Fechar">✖</button>
-      <h3 id="challenge-title"></h3>
+      <button class="modal__close">&times;</button>
+      <h2 id="challenge-title"></h2>
       <div id="challenge-body"></div>
     </div>
   </div>
 
-  <!-- Toasts -->
   <div id="toast-container"></div>
 
-  <!-- Bibliotecas Globe / Three -->
-  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
-  <script src="https://unpkg.com/globe.gl"></script>
-  <script>
-    // Promise resolvida para o app.js saber que libs já estão carregadas
-    window.loadGlobeLibs = () => Promise.resolve();
-  </script>
-
-  <!-- App principal -->
   <script type="module" src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.error('Erro no Service Worker', err));
+    }
+  </script>
 </body>
 </html>
