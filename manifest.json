@@ -1,60 +1,17 @@
 {
-  "name": "Romantic Globe",
-  "short_name": "RomanticGlobe",
-  "description": "Um globo romântico interativo feito especialmente para você ❤️",
-  "start_url": "/",
-  "scope": "/",
+  "name": "Mapa Romântico",
+  "short_name": "Romance",
+  "description": "Mapa romântico interativo em globo 3D com lugares especiais e desafios.",
+  "start_url": "/index.html",
   "display": "standalone",
-  "orientation": "any",
   "background_color": "#000000",
-  "theme_color": "#9c27b0",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cdn.jsdelivr.net/gh/faviconkit/favicons/heart.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0yMCAzNS4yYy00LjQtMy44LTEwLjItNy41LTE1LTEyLjFjLTQuOS00LjgtOC4yLTEwLjctNi43LTE2LjEgMS42LTUuMyA3LTguOCAxMi0xLjggMy44LTQuMyA4LjktMy41IDEyLS4xIDMuMS0zLjQgNy0zLjUgMTEuOC0uMSA1LjItLjggMTAuNy02LjggMTUuNiA0LjgtNC40IDEwLjYtOC4zIDE1LTEyLjEiIGZpbGw9IiNmZjQwODEiIHN0cm9rZT0iI2ZmNDA4MSIgc3Ryb2tlLXdpZHRoPSIwIi8+PC9zdmc+",
+      "sizes": "40x40",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ]
