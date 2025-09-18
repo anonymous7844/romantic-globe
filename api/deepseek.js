@@ -1,28 +1,27 @@
-// api/deepseek.js
-// Função serverless para gerar mensagem romântica
-// Pega a chave da API DeepSeek de process.env.DEEPSEEK (configurada no Vercel)
-
+// /api/deepseek.js
 export default async function handler(req, res) {
   const { prompt } = req.query;
-  if (!prompt) {
-    return res.status(400).json({ error: 'Prompt é obrigatório' });
+  try {
+    // Se você tem uma chave Deepseek, configure-a como variável de ambiente no Vercel:
+    // Settings > Environment Variables > DEEPSEEK_API_KEY
+    const key = process.env.DEEPSEEK_API_KEY;
+    if (!key) {
+      // fallback se não tiver chave
+      return res.status(200).json({ message: `Um lugar romântico chamado ${prompt} ❤️` });
+    }
+
+    // Exemplo de chamada à API Deepseek (ajuste ao formato real da sua API)
+    const resp = await fetch('https://api.deepseek.com/v1/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${key}`
+      },
+      body: JSON.stringify({ prompt })
+    });
+    const data = await resp.json();
+    res.status(200).json({ message: data.message || `Um lugar romântico chamado ${prompt} ❤️` });
+  } catch (err) {
+    res.status(500).json({ error: 'Erro ao gerar mensagem' });
   }
-
-  // Se um dia quiser integrar com um endpoint real:
-  // const apiKey = process.env.DEEPSEEK;
-  // const response = await fetch('https://api.deepseek.ai/v1/messages', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     'Authorization': `Bearer ${apiKey}`
-  //   },
-  //   body: JSON.stringify({prompt})
-  // });
-  // const data = await response.json();
-  // return res.status(200).json({ message: data.message });
-
-  // Por enquanto, retorna mensagem romântica simples:
-  const message = `Este é um lugar especial chamado ${prompt}, perfeito para momentos inesquecíveis ❤️`;
-
-  res.status(200).json({ message });
 }
