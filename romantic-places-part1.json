@@ -1,313 +1,307 @@
 [
   {
-    "id": "paris_eiffel",
-    "name": "Torre Eiffel - Paris",
+    "id": "p1",
+    "name": "Paris - Torre Eiffel",
     "lat": 48.8584,
     "lng": 2.2945,
-    "imageQuery": "Eiffel Tower romantic night",
-    "customMessage": "Aqui nos conhecemos e a cidade iluminou o momento ✨"
+    "customMessage": "O cenário perfeito para um beijo sob as luzes da Torre Eiffel 🌟"
   },
   {
-    "id": "venice_gondola",
-    "name": "Gôndolas de Veneza",
+    "id": "p2",
+    "name": "Veneza - Passeio de Gôndola",
     "lat": 45.4408,
     "lng": 12.3155
   },
   {
-    "id": "santorini_sunset",
-    "name": "Por do Sol - Santorini",
+    "id": "p3",
+    "name": "Santorini - Pôr do Sol",
     "lat": 36.3932,
-    "lng": 25.4615,
-    "customMessage": "O pôr do sol que parecia pintura ❤️"
+    "lng": 25.4615
   },
   {
-    "id": "kyoto_garden",
-    "name": "Jardim Secreto - Kyoto",
-    "lat": 35.0116,
-    "lng": 135.7681
-  },
-  {
-    "id": "newyork_centralpark",
-    "name": "Central Park - Nova Iorque",
-    "lat": 40.7829,
-    "lng": -73.9654
-  },
-  {
-    "id": "prague_charles",
-    "name": "Ponte Carlos - Praga",
-    "lat": 50.0865,
-    "lng": 14.4114,
-    "customMessage": "Caminhamos de mãos dadas nesta ponte histórica 💕"
-  },
-  {
-    "id": "maldives_resort",
-    "name": "Resort nas Maldivas",
+    "id": "p4",
+    "name": "Maldivas - Praia Privativa",
     "lat": 3.2028,
     "lng": 73.2207
   },
   {
-    "id": "dubai_burj",
-    "name": "Burj Khalifa - Dubai",
+    "id": "p5",
+    "name": "Kyoto - Jardim de Cerejeiras",
+    "lat": 35.0116,
+    "lng": 135.7681
+  },
+  {
+    "id": "p6",
+    "name": "Bali - Templo no Mar",
+    "lat": -8.4095,
+    "lng": 115.1889
+  },
+  {
+    "id": "p7",
+    "name": "Havaí - Praia de Waikiki",
+    "lat": 21.285,
+    "lng": -157.8357
+  },
+  {
+    "id": "p8",
+    "name": "Nova York - Central Park",
+    "lat": 40.7851,
+    "lng": -73.9683
+  },
+  {
+    "id": "p9",
+    "name": "Roma - Fontana di Trevi",
+    "lat": 41.9009,
+    "lng": 12.4833
+  },
+  {
+    "id": "p10",
+    "name": "Praga - Ponte Carlos",
+    "lat": 50.0865,
+    "lng": 14.4114
+  },
+
+  {
+    "id": "p11",
+    "name": "Amsterdã - Passeio de Barco",
+    "lat": 52.3676,
+    "lng": 4.9041
+  },
+  {
+    "id": "p12",
+    "name": "Machu Picchu",
+    "lat": -13.1631,
+    "lng": -72.545
+  },
+  {
+    "id": "p13",
+    "name": "Dubai - Topo do Burj Khalifa",
     "lat": 25.1972,
     "lng": 55.2744
   },
   {
-    "id": "floripa_beach",
-    "name": "Praia Secreta - Florianópolis",
-    "lat": -27.5949,
-    "lng": -48.5482
+    "id": "p14",
+    "name": "Londres - Passeio no Tâmisa",
+    "lat": 51.5074,
+    "lng": -0.1278
   },
   {
-    "id": "buenosaires_teatro",
-    "name": "Teatro Colón - Buenos Aires",
-    "lat": -34.6019,
-    "lng": -58.3832
-  },
-
-  {
-    "id": "capetown_tablemountain",
-    "name": "Table Mountain - Cidade do Cabo",
-    "lat": -33.9628,
-    "lng": 18.4098
-  },
-  {
-    "id": "istanbul_bosphorus",
-    "name": "Bósforo - Istambul",
-    "lat": 41.0419,
-    "lng": 29.0028
-  },
-  {
-    "id": "cancun_beach",
-    "name": "Praia de Cancún",
-    "lat": 21.1619,
-    "lng": -86.8515
-  },
-  {
-    "id": "hawaii_maui",
-    "name": "Maui - Havaí",
-    "lat": 20.7984,
-    "lng": -156.3319
-  },
-  {
-    "id": "rome_colosseum",
-    "name": "Coliseu - Roma",
-    "lat": 41.8902,
-    "lng": 12.4922
-  },
-  {
-    "id": "barcelona_parkguell",
-    "name": "Parque Güell - Barcelona",
-    "lat": 41.4145,
-    "lng": 2.1527
-  },
-  {
-    "id": "rio_paoacucar",
-    "name": "Pão de Açúcar - Rio de Janeiro",
-    "lat": -22.9486,
-    "lng": -43.1566
-  },
-  {
-    "id": "lisboa_alfama",
-    "name": "Alfama - Lisboa",
-    "lat": 38.7139,
-    "lng": -9.1278
-  },
-  {
-    "id": "amsterdam_canals",
-    "name": "Canais de Amsterdã",
-    "lat": 52.3731,
-    "lng": 4.8922
-  },
-  {
-    "id": "machu_picchu",
-    "name": "Machu Picchu",
-    "lat": -13.1631,
-    "lng": -72.5450,
-    "customMessage": "As ruínas que nos lembram a eternidade da nossa história ⛰️"
+    "id": "p15",
+    "name": "Florença - Ponte Vecchio",
+    "lat": 43.7687,
+    "lng": 11.255
   },
 
   {
-    "id": "bora_bora",
-    "name": "Bora Bora",
-    "lat": -16.5004,
-    "lng": -151.7415
-  },
-  {
-    "id": "niagara_falls",
-    "name": "Cataratas do Niágara",
-    "lat": 43.0828,
-    "lng": -79.0742
-  },
-  {
-    "id": "london_eye",
-    "name": "London Eye - Londres",
-    "lat": 51.5033,
-    "lng": -0.1195
-  },
-  {
-    "id": "sydney_opera",
-    "name": "Ópera de Sydney",
-    "lat": -33.8568,
-    "lng": 151.2153
-  },
-  {
-    "id": "grand_canyon",
-    "name": "Grand Canyon",
-    "lat": 36.0544,
-    "lng": -112.1401
-  },
-  {
-    "id": "iceland_reykjavik",
-    "name": "Reykjavik - Islândia",
-    "lat": 64.1355,
-    "lng": -21.8954
-  },
-  {
-    "id": "edinburgh_castle",
-    "name": "Castelo de Edimburgo",
+    "id": "p16",
+    "name": "Edimburgo - Castelo",
     "lat": 55.9486,
     "lng": -3.1999
   },
   {
-    "id": "vienna_schonbrunn",
-    "name": "Palácio de Schönbrunn - Viena",
-    "lat": 48.1845,
-    "lng": 16.3122
+    "id": "p17",
+    "name": "Zurique - Lago",
+    "lat": 47.3769,
+    "lng": 8.5417
   },
   {
-    "id": "zurich_lake",
-    "name": "Lago de Zurique",
-    "lat": 47.3673,
-    "lng": 8.5500
+    "id": "p18",
+    "name": "Copenhague - Nyhavn",
+    "lat": 55.6805,
+    "lng": 12.5882
   },
   {
-    "id": "budapest_parliament",
-    "name": "Parlamento - Budapeste",
-    "lat": 47.5076,
-    "lng": 19.0452
-  },
-
-  {
-    "id": "athens_acropolis",
-    "name": "Acrópole - Atenas",
-    "lat": 37.9715,
-    "lng": 23.7257
+    "id": "p19",
+    "name": "Ilhas Seychelles",
+    "lat": -4.6796,
+    "lng": 55.492
   },
   {
-    "id": "montreal_oldport",
-    "name": "Old Port - Montreal",
-    "lat": 45.5017,
-    "lng": -73.5561
-  },
-  {
-    "id": "helsinki_market",
-    "name": "Mercado de Helsinque",
-    "lat": 60.1675,
-    "lng": 24.9534
-  },
-  {
-    "id": "oslo_fjord",
-    "name": "Fiorde de Oslo",
-    "lat": 59.9139,
-    "lng": 10.7522
-  },
-  {
-    "id": "cairo_pyramids",
-    "name": "Pirâmides de Gizé - Cairo",
-    "lat": 29.9792,
-    "lng": 31.1342
+    "id": "p20",
+    "name": "Queenstown - Lago Wakatipu",
+    "lat": -45.0312,
+    "lng": 168.6626
   },
 
   {
-    "id": "bali_secret_beach",
-    "name": "Praia Secreta - Bali",
+    "id": "p21",
+    "name": "Los Angeles - Santa Monica",
+    "lat": 34.0195,
+    "lng": -118.4912
+  },
+  {
+    "id": "p22",
+    "name": "Toronto - Torre CN",
+    "lat": 43.6426,
+    "lng": -79.3871
+  },
+  {
+    "id": "p23",
+    "name": "Sydney - Opera House",
+    "lat": -33.8568,
+    "lng": 151.2153
+  },
+  {
+    "id": "p24",
+    "name": "Ilhas Fiji - Praia",
+    "lat": -17.7134,
+    "lng": 178.065
+  },
+  {
+    "id": "p25",
+    "name": "Banff - Lago Moraine",
+    "lat": 51.3217,
+    "lng": -116.186
+  },
+
+  {
+    "id": "p26",
+    "name": "Rio de Janeiro - Pão de Açúcar",
+    "lat": -22.9519,
+    "lng": -43.2105
+  },
+  {
+    "id": "p27",
+    "name": "Buenos Aires - Caminito",
+    "lat": -34.6345,
+    "lng": -58.3632
+  },
+  {
+    "id": "p28",
+    "name": "Cidade do Cabo - Table Mountain",
+    "lat": -33.9628,
+    "lng": 18.4098
+  },
+  {
+    "id": "p29",
+    "name": "Istambul - Santa Sofia",
+    "lat": 41.0082,
+    "lng": 28.9784
+  },
+  {
+    "id": "p30",
+    "name": "Bangkok - Grand Palace",
+    "lat": 13.750,
+    "lng": 100.491
+  },
+
+  {
+    "id": "p31",
+    "name": "Ilhas Maurício",
+    "lat": -20.3484,
+    "lng": 57.5522
+  },
+  {
+    "id": "p32",
+    "name": "Reykjavík - Aurora Boreal",
+    "lat": 64.1355,
+    "lng": -21.8954
+  },
+  {
+    "id": "p33",
+    "name": "Ilhas Canárias",
+    "lat": 28.2916,
+    "lng": -16.6291
+  },
+  {
+    "id": "p34",
+    "name": "Barcelona - Parque Güell",
+    "lat": 41.4145,
+    "lng": 2.1527
+  },
+  {
+    "id": "p35",
+    "name": "Costa Amalfitana",
+    "lat": 40.6333,
+    "lng": 14.6021
+  },
+
+  {
+    "id": "p36",
+    "name": "Ilhas Phi Phi",
+    "lat": 7.7407,
+    "lng": 98.7774
+  },
+  {
+    "id": "p37",
+    "name": "Monte Fuji",
+    "lat": 35.3606,
+    "lng": 138.7274
+  },
+  {
+    "id": "p38",
+    "name": "Petra",
+    "lat": 30.3285,
+    "lng": 35.4444
+  },
+  {
+    "id": "p39",
+    "name": "Grand Canyon",
+    "lat": 36.1069,
+    "lng": -112.1129
+  },
+  {
+    "id": "p40",
+    "name": "Niágara Falls",
+    "lat": 43.0962,
+    "lng": -79.0377
+  },
+
+  {
+    "id": "p41",
+    "name": "Bali - Praia Secreta",
     "lat": -8.4095,
     "lng": 115.1889,
     "challenge": {
       "type": "password",
-      "question": "Digite a data do nosso primeiro beijo (DDMMAAAA)",
-      "answer": "04092006"
+      "question": "Digite a senha do paraíso 🌴",
+      "answer": "amor"
     }
   },
   {
-    "id": "rome_fontana",
-    "name": "Fontana di Trevi - Roma",
-    "lat": 41.9009,
-    "lng": 12.4833,
+    "id": "p42",
+    "name": "Paris - Jardim Secreto",
+    "lat": 48.8566,
+    "lng": 2.3522,
     "challenge": {
       "type": "quiz",
-      "question": "Qual moeda jogamos juntos?",
-      "options": ["1 euro", "2 euros", "5 euros"],
-      "answer": "2 euros"
+      "question": "Qual flor simboliza o amor?",
+      "options": ["Rosa","Girassol","Tulipa"],
+      "answer": "Rosa"
     }
   },
   {
-    "id": "prague_castle",
-    "name": "Castelo de Praga",
-    "lat": 50.0911,
-    "lng": 14.4010,
+    "id": "p43",
+    "name": "Roma - Segredo Antigo",
+    "lat": 41.9028,
+    "lng": 12.4964,
     "challenge": {
       "type": "riddle",
-      "question": "Sou alto e antigo, guardo reis e histórias, quem sou?",
-      "answer": "Castelo"
+      "question": "Sou eterno, mas não sou tempo. Sou pedra, mas não sou gelo. O que sou?",
+      "answer": "Coliseu"
     }
   },
   {
-    "id": "tokyo_garden",
-    "name": "Jardim Imperial - Tóquio",
-    "lat": 35.6852,
-    "lng": 139.7528,
+    "id": "p44",
+    "name": "Ilhas Maldivas - Cabana Secreta",
+    "lat": 3.2028,
+    "lng": 73.2207,
     "challenge": {
-      "type": "order",
-      "question": "Ordene os passos do nosso passeio neste jardim",
-      "options": ["Entrada", "Ponte Vermelha", "Casa de Chá"],
-      "answer": ["Entrada", "Ponte Vermelha", "Casa de Chá"]
+      "type": "slider",
+      "question": "Acerte o nível do mar: ajuste para 50",
+      "answer": 50
     }
   },
   {
-    "id": "madrid_palace",
-    "name": "Palácio Real - Madrid",
-    "lat": 40.4179,
-    "lng": -3.7143,
+    "id": "p45",
+    "name": "Nova York - Jardim Oculto",
+    "lat": 40.7851,
+    "lng": -73.9683,
     "challenge": {
-      "type": "quiz",
-      "question": "Em qual sala nos perdemos?",
-      "options": ["Trono", "Banquete", "Espelhos"],
-      "answer": "Espelhos"
-    }
-  },
-  {
-    "id": "zurich_secret",
-    "name": "Cantinho Secreto - Zurique",
-    "lat": 47.3769,
-    "lng": 8.5417,
-    "challenge": {
-      "type": "password",
-      "question": "Digite a palavra do nosso código secreto",
-      "answer": "LUA"
-    }
-  },
-  {
-    "id": "lisboa_miradouro",
-    "name": "Miradouro Secreto - Lisboa",
-    "lat": 38.7169,
-    "lng": -9.1390,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou alto, vejo o Tejo, lugar perfeito para um beijo. Quem sou?",
-      "answer": "Miradouro"
-    }
-  },
-  {
-    "id": "vienna_ballroom",
-    "name": "Salão de Dança - Viena",
-    "lat": 48.2082,
-    "lng": 16.3738,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene os passos da valsa",
-      "options": ["Giro", "Abraço", "Olhar"],
-      "answer": ["Olhar", "Abraço", "Giro"]
+      "type": "colorPick",
+      "question": "Escolha a cor do amor 💖",
+      "options": ["red","blue","green"],
+      "answer": "red"
     }
   }
 ]
