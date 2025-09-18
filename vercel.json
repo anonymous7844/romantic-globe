@@ -1,41 +1,51 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "style.css", "use": "@vercel/static" },
-    { "src": "app.js", "use": "@vercel/static" },
-    { "src": "romantic-places-part1.json", "use": "@vercel/static" },
-    { "src": "romantic-places-part2.json", "use": "@vercel/static" },
-    { "src": "manifest.json", "use": "@vercel/static" },
-    { "src": "service-worker.js", "use": "@vercel/static" },
-    { "src": "api/unsplash.js", "use": "@vercel/node" },
-    { "src": "api/deepseek.js", "use": "@vercel/node" }
-  ],
-
-  "rewrites": [
-    { "source": "/api/unsplash", "destination": "/api/unsplash.js" },
-    { "source": "/api/deepseek", "destination": "/api/deepseek.js" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-
-  "headers": [
     {
-      "source": "/(.*)\\.(css|js|png|jpg|jpeg|gif|webp|svg)$",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
+      "src": "index.html",
+      "use": "@vercel/static"
     },
     {
-      "source": "/(.*)\\.json$",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, stale-while-revalidate=300" }
-      ]
+      "src": "style.css",
+      "use": "@vercel/static"
     },
     {
-      "source": "/index.html",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache" }
-      ]
+      "src": "app.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "romantic-places-part1.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "romantic-places-part2.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "manifest.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "service-worker.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/unsplash.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/deepseek.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/service-worker.js", "dest": "/service-worker.js" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/api/unsplash", "dest": "/api/unsplash.js" },
+    { "src": "/api/deepseek", "dest": "/api/deepseek.js" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
