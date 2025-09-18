@@ -1,335 +1,231 @@
 [
   {
-    "id": "buenosaires_gardensecret",
-    "name": "Jardim Japonês - Buenos Aires",
-    "lat": -34.5723,
-    "lng": -58.4116,
-    "challenge": {
-      "type": "riddle",
-      "question": "Um pedacinho do Japão na América, sou tranquilo e cheio de carpas. Quem sou?",
-      "answer": "Jardim Japonês"
-    }
+    "id": "p46",
+    "name": "Cataratas Vitória",
+    "lat": -17.9243,
+    "lng": 25.8567
   },
   {
-    "id": "capeverde_beach",
-    "name": "Praia Dourada - Cabo Verde",
-    "lat": 16.5388,
-    "lng": -23.0418,
-    "challenge": {
-      "type": "password",
-      "question": "Digite nossa palavra do verão de 2023",
-      "answer": "Sol"
-    }
+    "id": "p47",
+    "name": "Ilhas Galápagos",
+    "lat": -0.9538,
+    "lng": -90.9656
   },
   {
-    "id": "berlin_wallart",
-    "name": "Muro de Berlim - Arte",
-    "lat": 52.5076,
-    "lng": 13.4540,
-    "challenge": {
-      "type": "quiz",
-      "question": "Qual cor de grafite mais te marcou aqui?",
-      "options": ["Azul", "Amarelo", "Vermelho"],
-      "answer": "Amarelo"
-    }
+    "id": "p48",
+    "name": "Islândia - Lago Azul",
+    "lat": 63.8804,
+    "lng": -22.4495
   },
   {
-    "id": "moscow_redsquare",
-    "name": "Praça Vermelha - Moscou",
-    "lat": 55.7539,
-    "lng": 37.6208,
-    "challenge": {
-      "type": "password",
-      "question": "Digite a palavra que descreveu a neve",
-      "answer": "Mágica"
-    }
+    "id": "p49",
+    "name": "Mônaco - Porto",
+    "lat": 43.7384,
+    "lng": 7.4246
   },
   {
-    "id": "stockholm_archipelago",
-    "name": "Arquipélago - Estocolmo",
-    "lat": 59.3293,
-    "lng": 18.0686,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou feito de muitas ilhas, frio mas acolhedor. Quem sou?",
-      "answer": "Arquipélago"
-    }
+    "id": "p50",
+    "name": "Alpes Suíços - Chalé",
+    "lat": 46.8182,
+    "lng": 8.2275
+  },
+
+  {
+    "id": "p51",
+    "name": "Toscana - Vinhedos",
+    "lat": 43.7711,
+    "lng": 11.2486
   },
   {
-    "id": "zurich_chocolate",
-    "name": "Loja de Chocolate - Zurique",
-    "lat": 47.3732,
-    "lng": 8.5453,
-    "challenge": {
-      "type": "quiz",
-      "question": "Qual sabor de chocolate compramos?",
-      "options": ["Ao leite", "Amargo", "Branco"],
-      "answer": "Ao leite"
-    }
+    "id": "p52",
+    "name": "Quebec - Cidade Antiga",
+    "lat": 46.8139,
+    "lng": -71.2082
   },
   {
-    "id": "singapore_gardens",
-    "name": "Gardens by the Bay - Singapura",
-    "lat": 1.2816,
-    "lng": 103.8636,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene nosso passeio: ",
-      "options": ["Árvore Supertree", "Estufa de Flores", "Caminho Suspenso"],
-      "answer": ["Árvore Supertree", "Caminho Suspenso", "Estufa de Flores"]
-    }
+    "id": "p53",
+    "name": "Patagônia - Glaciar",
+    "lat": -50.9423,
+    "lng": -73.4068
   },
   {
-    "id": "newzealand_milford",
-    "name": "Milford Sound - Nova Zelândia",
+    "id": "p54",
+    "name": "Dubai - Safari no Deserto",
+    "lat": 25.2048,
+    "lng": 55.2708
+  },
+  {
+    "id": "p55",
+    "name": "Caribe - Praia Azul",
+    "lat": 18.2208,
+    "lng": -66.5901
+  },
+
+  {
+    "id": "p56",
+    "name": "Sardenha - Costa",
+    "lat": 40.1209,
+    "lng": 9.0129
+  },
+  {
+    "id": "p57",
+    "name": "Polinésia Francesa - Bora Bora",
+    "lat": -16.5004,
+    "lng": -151.7415
+  },
+  {
+    "id": "p58",
+    "name": "Amalfi - Vista Mar",
+    "lat": 40.6333,
+    "lng": 14.6021
+  },
+  {
+    "id": "p59",
+    "name": "Croácia - Dubrovnik",
+    "lat": 42.6507,
+    "lng": 18.0944
+  },
+  {
+    "id": "p60",
+    "name": "Escócia - Ilha Skye",
+    "lat": 57.2736,
+    "lng": -6.2155
+  },
+
+  {
+    "id": "p61",
+    "name": "Chile - Deserto do Atacama",
+    "lat": -24.5000,
+    "lng": -69.2500
+  },
+  {
+    "id": "p62",
+    "name": "Alasca - Glaciar",
+    "lat": 61.0167,
+    "lng": -149.7333
+  },
+  {
+    "id": "p63",
+    "name": "Nova Zelândia - Milford Sound",
     "lat": -44.6167,
-    "lng": 167.8667,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou um fiorde majestoso com cachoeiras, quem sou?",
-      "answer": "Milford Sound"
-    }
+    "lng": 167.8667
   },
   {
-    "id": "iceland_blue_lagoon",
-    "name": "Blue Lagoon - Islândia",
-    "lat": 63.8790,
-    "lng": -22.4495,
-    "challenge": {
-      "type": "password",
-      "question": "Digite a cor da lagoa",
-      "answer": "Azul"
-    }
+    "id": "p64",
+    "name": "Austrália - Grande Barreira de Coral",
+    "lat": -18.2871,
+    "lng": 147.6992
   },
   {
-    "id": "egypt_valley",
-    "name": "Vale dos Reis - Egito",
-    "lat": 25.7402,
-    "lng": 32.6014,
+    "id": "p65",
+    "name": "Noruega - Fiordes",
+    "lat": 60.7957,
+    "lng": 7.5749
+  },
+
+  {
+    "id": "p66",
+    "name": "Viena - Palácio Schönbrunn",
+    "lat": 48.1845,
+    "lng": 16.3122,
     "challenge": {
       "type": "quiz",
-      "question": "Quem repousa aqui?",
-      "options": ["Faraós", "Deuses", "Guerreiros"],
-      "answer": "Faraós"
+      "question": "Qual é o apelido de Viena?",
+      "options": ["Cidade Imperial","Cidade Eterna","Cidade das Luzes"],
+      "answer": "Cidade Imperial"
+    }
+  },
+  {
+    "id": "p67",
+    "name": "Budapeste - Banhos Termais",
+    "lat": 47.4979,
+    "lng": 19.0402,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou quente, mas não sou fogo. Sou relaxante, mas não sou música. O que sou?",
+      "answer": "Água termal"
+    }
+  },
+  {
+    "id": "p68",
+    "name": "Lisboa - Miradouro Secreto",
+    "lat": 38.7169,
+    "lng": -9.139
+  },
+  {
+    "id": "p69",
+    "name": "Porto - Caves do Vinho",
+    "lat": 41.1406,
+    "lng": -8.611
+  },
+  {
+    "id": "p70",
+    "name": "Ilhas Maldivas - Ilha Privada",
+    "lat": 3.2028,
+    "lng": 73.2207,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a senha para entrar no paraíso 🌴",
+      "answer": "felicidade"
     }
   },
 
   {
-    "id": "chile_atacama",
-    "name": "Deserto do Atacama - Chile",
-    "lat": -23.2413,
-    "lng": -68.9297,
+    "id": "p71",
+    "name": "Safari na Tanzânia",
+    "lat": -2.3333,
+    "lng": 34.8333,
     "challenge": {
-      "type": "riddle",
-      "question": "Sou o deserto mais seco do mundo, quem sou?",
-      "answer": "Atacama"
+      "type": "colorPick",
+      "question": "Escolha a cor do pôr do sol africano",
+      "options": ["orange","purple","blue"],
+      "answer": "orange"
     }
   },
   {
-    "id": "norway_northernlights",
-    "name": "Aurora Boreal - Noruega",
-    "lat": 69.6496,
-    "lng": 18.9560,
+    "id": "p72",
+    "name": "Mônaco - Cassino",
+    "lat": 43.7384,
+    "lng": 7.4246,
     "challenge": {
-      "type": "password",
-      "question": "Digite a cor principal que vimos no céu",
-      "answer": "Verde"
+      "type": "slider",
+      "question": "Acerte a aposta: ajuste para 70",
+      "answer": 70
     }
   },
   {
-    "id": "finland_igloo",
-    "name": "Igloo Hotel - Finlândia",
-    "lat": 68.9707,
-    "lng": 27.0045,
+    "id": "p73",
+    "name": "Berlim - Muro Secreto",
+    "lat": 52.5200,
+    "lng": 13.4050,
     "challenge": {
       "type": "order",
-      "question": "Ordene nosso dia no hotel igloo",
-      "options": ["Check-in", "Banho quente", "Aurora"],
-      "answer": ["Check-in", "Aurora", "Banho quente"]
+      "question": "Ordene estas palavras para formar uma frase romântica",
+      "options": ["Eu","você","amo"],
+      "answer": ["Eu","amo","você"]
     }
   },
   {
-    "id": "india_tajmahal",
-    "name": "Taj Mahal - Índia",
-    "lat": 27.1751,
-    "lng": 78.0421,
+    "id": "p74",
+    "name": "Ilhas Gregas - Caverna do Amor",
+    "lat": 37.9838,
+    "lng": 23.7275,
+    "challenge": {
+      "type": "memory",
+      "question": "Encontre os pares de corações ❤️",
+      "cards": ["❤️","❤️","💙","💙","💚","💚","💛","💛"]
+    }
+  },
+  {
+    "id": "p75",
+    "name": "Mont Saint-Michel",
+    "lat": 48.636,
+    "lng": -1.5115,
     "challenge": {
       "type": "quiz",
-      "question": "Quem construiu este monumento de amor?",
-      "options": ["Shah Jahan", "Akbar", "Babur"],
-      "answer": "Shah Jahan"
-    }
-  },
-  {
-    "id": "usa_route66",
-    "name": "Route 66 - EUA",
-    "lat": 35.4676,
-    "lng": -97.5164,
-    "challenge": {
-      "type": "password",
-      "question": "Digite o número da rota",
-      "answer": "66"
-    }
-  },
-  {
-    "id": "peru_rainbowmountain",
-    "name": "Montanha Arco-Íris - Peru",
-    "lat": -13.8697,
-    "lng": -71.3022,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou uma montanha colorida, quem sou?",
-      "answer": "Montanha Arco-Íris"
-    }
-  },
-  {
-    "id": "canada_banf",
-    "name": "Lago Moraine - Banff",
-    "lat": 51.3217,
-    "lng": -116.1860,
-    "challenge": {
-      "type": "quiz",
-      "question": "Qual foi o primeiro animal que vimos aqui?",
-      "options": ["Urso", "Alce", "Águia"],
-      "answer": "Alce"
-    }
-  },
-  {
-    "id": "thailand_phi",
-    "name": "Ilhas Phi Phi - Tailândia",
-    "lat": 7.7397,
-    "lng": 98.7792,
-    "challenge": {
-      "type": "password",
-      "question": "Digite a palavra que descreveu o mar",
-      "answer": "Cristalino"
-    }
-  },
-  {
-    "id": "kenya_masai",
-    "name": "Safari Masai Mara - Quênia",
-    "lat": -1.4061,
-    "lng": 35.0140,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene os animais que vimos",
-      "options": ["Leão", "Girafa", "Elefante"],
-      "answer": ["Girafa", "Leão", "Elefante"]
-    }
-  },
-
-  {
-    "id": "france_loire",
-    "name": "Castelo do Loire - França",
-    "lat": 47.4136,
-    "lng": 0.7039,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou um castelo no vale dos reis franceses, quem sou?",
-      "answer": "Loire"
-    }
-  },
-  {
-    "id": "switzerland_matterhorn",
-    "name": "Matterhorn - Suíça",
-    "lat": 45.9763,
-    "lng": 7.6586,
-    "challenge": {
-      "type": "password",
-      "question": "Digite a altitude aproximada (metros)",
-      "answer": "4478"
-    }
-  },
-  {
-    "id": "mexico_chichen",
-    "name": "Chichén Itzá - México",
-    "lat": 20.6843,
-    "lng": -88.5678,
-    "challenge": {
-      "type": "quiz",
-      "question": "A quem este templo é dedicado?",
-      "options": ["Kukulcán", "Quetzalcoatl", "Chaac"],
-      "answer": "Kukulcán"
-    }
-  },
-  {
-    "id": "australia_whitsundays",
-    "name": "Praia Whitehaven - Austrália",
-    "lat": -20.2827,
-    "lng": 149.0370,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou areia branca mais fina que pó, quem sou?",
-      "answer": "Whitehaven"
-    }
-  },
-  {
-    "id": "greece_meteora",
-    "name": "Mosteiros de Meteora - Grécia",
-    "lat": 39.7210,
-    "lng": 21.6319,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene os mosteiros que visitamos",
-      "options": ["Varlaam", "Rousanou", "Santo Estêvão"],
-      "answer": ["Rousanou", "Varlaam", "Santo Estêvão"]
-    }
-  },
-  {
-    "id": "southafrica_cape",
-    "name": "Cabo da Boa Esperança - África do Sul",
-    "lat": -34.3573,
-    "lng": 18.4716,
-    "challenge": {
-      "type": "password",
-      "question": "Digite o sentimento que tivemos aqui",
-      "answer": "Esperança"
-    }
-  },
-  {
-    "id": "indonesia_borobudur",
-    "name": "Templo Borobudur - Indonésia",
-    "lat": -7.6079,
-    "lng": 110.2038,
-    "challenge": {
-      "type": "quiz",
-      "question": "Qual religião é praticada neste templo?",
-      "options": ["Budismo", "Hinduísmo", "Cristianismo"],
-      "answer": "Budismo"
-    }
-  },
-  {
-    "id": "china_greatwall",
-    "name": "Grande Muralha - China",
-    "lat": 40.4319,
-    "lng": 116.5704,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou tão longo que me veem do espaço, quem sou?",
-      "answer": "Muralha"
-    }
-  },
-  {
-    "id": "usa_yosemite",
-    "name": "Parque Yosemite - EUA",
-    "lat": 37.8651,
-    "lng": -119.5383,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene as trilhas que fizemos",
-      "options": ["Mirror Lake", "Half Dome", "Vernal Falls"],
-      "answer": ["Mirror Lake", "Vernal Falls", "Half Dome"]
-    }
-  },
-  {
-    "id": "morocco_marrakesh",
-    "name": "Mercado de Marrakesh - Marrocos",
-    "lat": 31.6295,
-    "lng": -7.9811,
-    "challenge": {
-      "type": "password",
-      "question": "Digite o cheiro que sentimos no mercado",
-      "answer": "Especiarias"
+      "question": "Que mar cerca o Mont Saint-Michel?",
+      "options": ["Canal da Mancha","Mediterrâneo","Atlântico"],
+      "answer": "Canal da Mancha"
     }
   }
 ]
