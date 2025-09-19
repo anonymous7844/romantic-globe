@@ -1,14 +1,21 @@
-// ---------- Importa os dados dos dois JSON ----------
-import part1 from './romantic-places-part1.json' assert { type: 'json' };
-import part2 from './romantic-places-part2.json' assert { type: 'json' };
-const romanticPlaces = [...part1, ...part2];
+// app.js — versão otimizada e compatível com GitHub Pages/Vercel
 
-// ---------- Estado ----------
+// --------- Carrega dados ---------
+async function loadPlaces() {
+  const [part1, part2] = await Promise.all([
+    fetch('/romantic-places-part1.json').then(r => r.json()),
+    fetch('/romantic-places-part2.json').then(r => r.json())
+  ]);
+  return [...part1, ...part2];
+}
+
+// --------- Estado ----------
+let romanticPlaces = [];
 let globeInstance;
 const favorites = new Set(JSON.parse(localStorage.getItem('rg_favorites') || '[]'));
 const unlocked = new Set(JSON.parse(localStorage.getItem('rg_unlocked_places') || '[]'));
 
-// ---------- Elementos DOM ----------
+// --------- Elementos DOM ----------
 const globeContainer = document.getElementById('globe-container');
 const globeLoading = document.getElementById('globe-loading');
 const modalPlace = document.getElementById('modal-place');
@@ -23,47 +30,27 @@ const challengeBody = document.getElementById('challenge-body');
 const toastContainer = document.getElementById('toast-container');
 const badgeFavorites = document.getElementById('badge-favorites');
 
-// ---------- Utils ----------
+// --------- Utils ----------
 function updateFavoritesBadge() {
   badgeFavorites.textContent = favorites.size;
   localStorage.setItem('rg_favorites', JSON.stringify([...favorites]));
 }
-
 function updateUnlocked() {
   localStorage.setItem('rg_unlocked_places', JSON.stringify([...unlocked]));
   updateProgress();
 }
-
 function showToast(msg, timeout = 2500) {
   const t = document.createElement('div');
-  t.className = 'toast';
+  t.className = 'toast fade-in';
   t.textContent = msg;
   toastContainer.appendChild(t);
   setTimeout(() => t.remove(), timeout);
 }
 
-function trapFocus(modalEl) {
-  const focusable = modalEl.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-  if (!focusable.length) return;
-  let i = 0;
-  function keyHandler(e) {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) i = (i - 1 + focusable.length) % focusable.length;
-      else i = (i + 1) % focusable.length;
-      focusable[i].focus();
-      e.preventDefault();
-    } else if (e.key === 'Escape') {
-      closeModal(modalEl);
-    }
-  }
-  modalEl.addEventListener('keydown', keyHandler);
-}
-
-// ---------- Modais ----------
+// --------- Modais ----------
 function openModal(modalEl) {
   modalEl.hidden = false;
   modalEl.setAttribute('aria-hidden', 'false');
-  trapFocus(modalEl);
 }
 function closeModal(modalEl) {
   modalEl.hidden = true;
@@ -72,7 +59,7 @@ function closeModal(modalEl) {
 modalPlace.querySelector('.modal__close').addEventListener('click', () => closeModal(modalPlace));
 modalChallenge.querySelector('.modal__close').addEventListener('click', () => closeModal(modalChallenge));
 
-// ---------- Fetchers ----------
+// --------- Fetchers ----------
 async function fetchImage(query) {
   try {
     const resp = await fetch(`/api/unsplash?query=${encodeURIComponent(query)}`);
@@ -97,7 +84,7 @@ async function fetchGeneratedMessage(prompt) {
   return `Um lugar romântico chamado ${prompt} ❤️`;
 }
 
-// ---------- Progresso / Conquistas ----------
+// --------- Progresso / Conquistas ----------
 function updateProgress() {
   const total = romanticPlaces.length;
   const done = unlocked.size;
@@ -109,7 +96,7 @@ function updateProgress() {
   if (done === total) showToast('🏆 Mapa completo!');
 }
 
-// ---------- UI ----------
+// --------- UI ----------
 async function showPlaceModal(place) {
   modalTitle.textContent = place.name;
   modalImage.src = await fetchImage(place.imageQuery || place.name);
@@ -140,17 +127,11 @@ async function showPlaceModal(place) {
   openModal(modalPlace);
 }
 
-// ---------- Desafios ----------
+// --------- Desafios ----------
 function showChallengeModal(place) {
   challengeTitle.textContent = place.challenge.question;
   challengeBody.innerHTML = '';
-  const type = place.challenge.type;
-  const map = {
-    password: renderPasswordChallenge,
-    quiz: renderQuizChallenge,
-    riddle: renderRiddleChallenge
-  };
-  (map[type] || (() => showToast('Tipo não suportado')))(place);
+  renderChallenge(place);
   openModal(modalChallenge);
 }
 function markUnlockedAndShow(place) {
@@ -161,54 +142,33 @@ function markUnlockedAndShow(place) {
   showPlaceModal(place);
 }
 
-// tipos de desafio (exemplos)
-function renderPasswordChallenge(place) {
-  const input = document.createElement('input');
-  input.type = 'password';
-  input.placeholder = 'Digite a senha';
-  const btn = document.createElement('button');
-  btn.className = 'btn btn--primary';
-  btn.textContent = 'Desbloquear';
-  btn.onclick = () => input.value.trim() === place.challenge.answer
-    ? markUnlockedAndShow(place)
-    : showToast('Senha incorreta 💔');
-  challengeBody.append(input, btn);
-}
-function renderQuizChallenge(place) {
-  place.challenge.options.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'btn btn--secondary';
-    btn.textContent = opt;
-    btn.onclick = () => opt === place.challenge.answer
-      ? markUnlockedAndShow(place)
-      : showToast('Resposta errada 💔');
-    challengeBody.append(btn);
-  });
-}
-function renderRiddleChallenge(place) {
+// desafio simples (pode adicionar os outros tipos aqui)
+function renderChallenge(place) {
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Resposta da charada';
+  input.placeholder = 'Digite a resposta';
   const btn = document.createElement('button');
   btn.className = 'btn btn--primary';
-  btn.textContent = 'Responder';
+  btn.textContent = 'Verificar';
   btn.onclick = () => input.value.trim().toLowerCase() === place.challenge.answer.toLowerCase()
     ? markUnlockedAndShow(place)
     : showToast('Resposta incorreta 💔');
   challengeBody.append(input, btn);
 }
 
-// cria o “pin” luz
-function createLight(place) {
+// cria o “pin” (efeito luz 3D)
+function createPin(place) {
   const el = document.createElement('div');
-  el.style.width = '8px';
-  el.style.height = '40px';
-  el.style.borderRadius = '4px';
+  el.style.width = '14px';
+  el.style.height = '14px';
+  el.style.borderRadius = '50%';
   el.style.cursor = 'pointer';
   el.style.background = unlocked.has(place.id)
     ? 'dodgerblue'
-    : place.challenge ? '#8b0000' : 'dodgerblue';
-  el.style.boxShadow = `0 0 20px ${unlocked.has(place.id) ? 'dodgerblue' : place.challenge ? '#8b0000' : 'dodgerblue'}`;
+    : place.challenge
+    ? 'crimson'
+    : 'dodgerblue';
+  el.classList.add('fade-in');
   el.title = place.name;
   el.addEventListener('click', () => {
     if (unlocked.has(place.id) || !place.challenge) showPlaceModal(place);
@@ -217,26 +177,26 @@ function createLight(place) {
   return el;
 }
 
-// ---------- Inicialização do globo ----------
+// --------- Inicialização do globo ----------
 async function init() {
-  try {
-    await window.loadGlobeLibs();
-    globeInstance = Globe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-      .htmlElementsData(romanticPlaces)
-      .htmlElement(d => createLight(d))
-      .backgroundColor('#000')
-      (globeContainer);
-    globeLoading.remove();
-    updateFavoritesBadge();
-    updateProgress();
-  } catch (err) {
-    console.error(err);
-    showToast('Não foi possível carregar o globo 😢');
-  }
+  romanticPlaces = await loadPlaces();
+  // aguarda Globe lib
+  await new Promise(res => {
+    const check = () => { if (window.Globe) res(); else setTimeout(check, 100); };
+    check();
+  });
+  globeInstance = Globe()
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+    .htmlElementsData(romanticPlaces)
+    .htmlElement(d => createPin(d))
+    .backgroundColor('#000')
+    (globeContainer);
+  globeLoading.remove();
+  updateFavoritesBadge();
+  updateProgress();
 }
 
-// ---------- Botões header ----------
+// --------- Botões header ----------
 document.getElementById('btn-day-night').addEventListener('click', () => {
   const isDark = document.body.dataset.theme === 'dark';
   document.body.dataset.theme = isDark ? 'light' : 'dark';
@@ -264,5 +224,5 @@ document.getElementById('btn-route').addEventListener('click', () => {
   showToast('Função de rota em breve 📍');
 });
 
-// ---------- Start ----------
-init();
+// --------- Start ----------
+document.addEventListener('DOMContentLoaded', init);
