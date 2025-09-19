@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#000000">
-  <title>Mapa Romântico</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mapa Romântico 3D</title>
+
+  <!-- Manifesto e ícone PWA -->
   <link rel="manifest" href="manifest.json">
-  <!-- libs para o globo 3D -->
-  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
-  <script src="https://unpkg.com/globe.gl"></script>
+  <link rel="apple-touch-icon" href="icon-512.png">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bibliotecas do Globe.js (Three.js + Three-Globe) -->
+  <script src="https://unpkg.com/three/build/three.min.js"></script>
+  <script src="https://unpkg.com/three-globe"></script>
 </head>
 <body data-theme="dark">
   <header class="header">
-    <h1 class="logo">Mapa Romântico</h1>
-    <div class="controls">
-      <button id="btn-day-night" class="btn">🌗</button>
-      <button id="btn-favorites" class="btn">❤️ <span id="badge-favorites">0</span></button>
-      <button id="btn-achievements" class="btn">🏅</button>
-      <button id="btn-reset" class="btn">🔄</button>
-      <button id="btn-unlock" class="btn">🔓</button>
-    </div>
+    <h1>Mapa Romântico 3D</h1>
+    <nav>
+      <button id="btn-day-night" class="btn">🌙/☀️</button>
+      <button id="btn-favorites" class="btn">❤️ Favoritos <span id="badge-favorites">0</span></button>
+      <button id="btn-achievements" class="btn">🏆 Conquistas</button>
+      <button id="btn-reset" class="btn">🔄 Resetar</button>
+      <button id="btn-unlock" class="btn">🔓 Desbloquear</button>
+      <button id="btn-route" class="btn">📍 Rota</button>
+    </nav>
   </header>
 
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-    <span id="progress-text"></span>
-  </div>
+  <main>
+    <!-- Container do globo -->
+    <div id="globe-container">
+      <div id="globe-loading">Carregando globo 3D…</div>
+    </div>
 
-  <div id="globe-container">
-    <div id="globe-loading">Carregando globo…</div>
-  </div>
+    <!-- Barra de progresso -->
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+      <span id="progress-text"></span>
+    </div>
+  </main>
 
-  <!-- Modal Lugar -->
+  <!-- Toasts -->
+  <div id="toast-container"></div>
+
+  <!-- Modal do lugar -->
   <div id="modal-place" class="modal" hidden aria-hidden="true">
     <div class="modal__content">
-      <button class="modal__close">&times;</button>
+      <button class="modal__close">✕</button>
       <h2 id="modal-title"></h2>
       <img id="modal-image" alt="">
       <p id="modal-description"></p>
       <div class="modal__actions">
-        <button id="btn-favorite" class="btn btn--primary">Favoritar</button>
-        <button id="btn-share" class="btn btn--secondary">Compartilhar</button>
+        <button id="btn-favorite" class="btn btn--primary">❤️ Favoritar</button>
+        <button id="btn-share" class="btn btn--secondary">🔗 Compartilhar</button>
       </div>
     </div>
   </div>
 
-  <!-- Modal Desafio -->
+  <!-- Modal do desafio -->
   <div id="modal-challenge" class="modal" hidden aria-hidden="true">
     <div class="modal__content">
-      <button class="modal__close">&times;</button>
+      <button class="modal__close">✕</button>
       <h2 id="challenge-title"></h2>
       <div id="challenge-body"></div>
     </div>
   </div>
 
-  <div id="toast-container"></div>
-
+  <!-- Script principal -->
   <script type="module" src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('Service Worker registrado'))
-        .catch(err => console.error('Erro no Service Worker', err));
-    }
-  </script>
 </body>
 </html>
