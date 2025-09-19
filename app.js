@@ -1,4 +1,4 @@
-// app.js — controla globo, modais, desafios, favoritos e conquistas
+// ---------- Importa os dados dos dois JSON ----------
 import part1 from './romantic-places-part1.json' assert { type: 'json' };
 import part2 from './romantic-places-part2.json' assert { type: 'json' };
 const romanticPlaces = [...part1, ...part2];
@@ -148,11 +148,7 @@ function showChallengeModal(place) {
   const map = {
     password: renderPasswordChallenge,
     quiz: renderQuizChallenge,
-    riddle: renderRiddleChallenge,
-    order: renderOrderChallenge,
-    slider: renderSliderChallenge,
-    memory: renderMemoryChallenge,
-    colorPick: renderColorPickChallenge
+    riddle: renderRiddleChallenge
   };
   (map[type] || (() => showToast('Tipo não suportado')))(place);
   openModal(modalChallenge);
@@ -165,7 +161,7 @@ function markUnlockedAndShow(place) {
   showPlaceModal(place);
 }
 
-// tipos de desafio
+// tipos de desafio (exemplos)
 function renderPasswordChallenge(place) {
   const input = document.createElement('input');
   input.type = 'password';
@@ -201,114 +197,18 @@ function renderRiddleChallenge(place) {
     : showToast('Resposta incorreta 💔');
   challengeBody.append(input, btn);
 }
-function renderOrderChallenge(place) {
-  const items = [...place.challenge.options].sort(() => Math.random() - 0.5);
-  const list = document.createElement('ul');
-  list.style.listStyle = 'none';
-  list.style.padding = '0';
-  items.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    li.draggable = true;
-    li.className = 'btn btn--secondary';
-    li.addEventListener('dragstart', e => e.dataTransfer.setData('text/plain', item));
-    list.append(li);
-  });
-  list.addEventListener('dragover', e => e.preventDefault());
-  list.addEventListener('drop', e => {
-    e.preventDefault();
-    const from = e.dataTransfer.getData('text/plain');
-    const target = e.target;
-    if (target.tagName === 'LI') {
-      const tmp = target.textContent;
-      target.textContent = from;
-    }
-  });
-  const btn = document.createElement('button');
-  btn.className = 'btn btn--primary';
-  btn.textContent = 'Verificar ordem';
-  btn.onclick = () => {
-    const currentOrder = [...list.children].map(li => li.textContent);
-    JSON.stringify(currentOrder) === JSON.stringify(place.challenge.answer)
-      ? markUnlockedAndShow(place)
-      : showToast('Ordem incorreta 💔');
-  };
-  challengeBody.append(list, btn);
-}
-function renderSliderChallenge(place) {
-  const slider = document.createElement('input');
-  slider.type = 'range';
-  slider.min = '0'; slider.max = '100'; slider.value = '0';
-  const label = document.createElement('div');
-  label.textContent = 'Ajuste até o ponto certo';
-  const btn = document.createElement('button');
-  btn.className = 'btn btn--primary';
-  btn.textContent = 'Verificar';
-  btn.onclick = () => parseInt(slider.value,10) === place.challenge.answer
-    ? markUnlockedAndShow(place)
-    : showToast('Ainda não está certo 💔');
-  challengeBody.append(label, slider, btn);
-}
-function renderMemoryChallenge(place) {
-  const cards = [...place.challenge.cards].sort(() => Math.random() - 0.5);
-  let selected = [], matched = [];
-  const grid = document.createElement('div');
-  grid.style.display = 'grid';
-  grid.style.gridTemplateColumns = 'repeat(4, 50px)';
-  grid.style.gap = '4px';
-  cards.forEach((card, idx) => {
-    const cell = document.createElement('div');
-    cell.textContent = '❓';
-    cell.style.fontSize = '24px';
-    cell.style.textAlign = 'center';
-    cell.style.border = '1px solid #ccc';
-    cell.style.cursor = 'pointer';
-    cell.dataset.value = card;
-    cell.addEventListener('click', () => {
-      if (matched.includes(idx) || selected.includes(idx)) return;
-      cell.textContent = card;
-      selected.push(idx);
-      if (selected.length === 2) {
-        const [i1,i2] = selected;
-        const c1 = cards[i1], c2 = cards[i2];
-        if (c1 === c2) {
-          matched.push(i1,i2);
-          if (matched.length === cards.length) markUnlockedAndShow(place);
-        } else {
-          setTimeout(() => {
-            grid.children[i1].textContent='❓';
-            grid.children[i2].textContent='❓';
-          },500);
-        }
-        selected = [];
-      }
-    });
-    grid.append(cell);
-  });
-  challengeBody.append(grid);
-}
-function renderColorPickChallenge(place) {
-  const question = document.createElement('div');
-  question.textContent = 'Escolha a cor certa:';
-  const btns = place.challenge.options.map(color => {
-    const b = document.createElement('button');
-    b.style.backgroundColor = color;
-    b.style.width = '40px';
-    b.style.height = '40px';
-    b.style.borderRadius = '50%';
-    b.style.margin = '4px';
-    b.onclick = () => color === place.challenge.answer
-      ? markUnlockedAndShow(place)
-      : showToast('Cor errada 💔');
-    return b;
-  });
-  challengeBody.append(question, ...btns);
-}
 
-// cria o pin (feixe de luz)
-function createPin(place) {
+// cria o “pin” luz
+function createLight(place) {
   const el = document.createElement('div');
-  el.className = 'pin ' + (unlocked.has(place.id) || !place.challenge ? 'unlocked' : 'locked');
+  el.style.width = '8px';
+  el.style.height = '40px';
+  el.style.borderRadius = '4px';
+  el.style.cursor = 'pointer';
+  el.style.background = unlocked.has(place.id)
+    ? 'dodgerblue'
+    : place.challenge ? '#8b0000' : 'dodgerblue';
+  el.style.boxShadow = `0 0 20px ${unlocked.has(place.id) ? 'dodgerblue' : place.challenge ? '#8b0000' : 'dodgerblue'}`;
   el.title = place.name;
   el.addEventListener('click', () => {
     if (unlocked.has(place.id) || !place.challenge) showPlaceModal(place);
@@ -320,10 +220,11 @@ function createPin(place) {
 // ---------- Inicialização do globo ----------
 async function init() {
   try {
+    await window.loadGlobeLibs();
     globeInstance = Globe()
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .htmlElementsData(romanticPlaces)
-      .htmlElement(d => createPin(d))
+      .htmlElement(d => createLight(d))
       .backgroundColor('#000')
       (globeContainer);
     globeLoading.remove();
@@ -358,6 +259,9 @@ document.getElementById('btn-unlock').addEventListener('click', () => {
   romanticPlaces.forEach(p => unlocked.add(p.id));
   updateUnlocked();
   showToast('Todos os lugares desbloqueados 🔓');
+});
+document.getElementById('btn-route').addEventListener('click', () => {
+  showToast('Função de rota em breve 📍');
 });
 
 // ---------- Start ----------
