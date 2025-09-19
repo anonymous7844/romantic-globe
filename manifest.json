@@ -1,16 +1,17 @@
 {
   "name": "Mapa Romântico",
-  "short_name": "Romance",
-  "description": "Mapa romântico interativo em globo 3D com lugares especiais e desafios.",
+  "short_name": "Romântico",
+  "description": "Um globo 3D interativo com lugares românticos, desafios e conquistas.",
   "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#000000",
-  "orientation": "portrait-primary",
+  "theme_color": "#ff4081",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0yMCAzNS4yYy00LjQtMy44LTEwLjItNy41LTE1LTEyLjFjLTQuOS00LjgtOC4yLTEwLjctNi43LTE2LjEgMS42LTUuMyA3LTguOCAxMi0xLjggMy44LTQuMyA4LjktMy41IDEyLS4xIDMuMS0zLjQgNy0zLjUgMTEuOC0uMSA1LjItLjggMTAuNy02LjggMTUuNiA0LjgtNC40IDEwLjYtOC4zIDE1LTEyLjEiIGZpbGw9IiNmZjQwODEiIHN0cm9rZT0iI2ZmNDA4MSIgc3Ryb2tlLXdpZHRoPSIwIi8+PC9zdmc+",
-      "sizes": "40x40",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23ff4081'/%3E%3Cstop offset='1' stop-color='%23f50057'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M256 464c-8 0-16-3-22-9l-155-153C39 263 24 221 24 178c0-69 56-125 125-125 38 0 74 17 99 47 25-30 61-47 99-47 69 0 125 56 125 125 0 43-15 85-55 124L278 455c-6 6-14 9-22 9z'/%3E%3C/svg%3E",
+      "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
