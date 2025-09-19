@@ -1,231 +1,343 @@
 [
   {
-    "id": "p46",
-    "name": "Cataratas Vitória",
-    "lat": -17.9243,
-    "lng": 25.8567
-  },
-  {
-    "id": "p47",
-    "name": "Ilhas Galápagos",
-    "lat": -0.9538,
-    "lng": -90.9656
-  },
-  {
-    "id": "p48",
-    "name": "Islândia - Lago Azul",
-    "lat": 63.8804,
-    "lng": -22.4495
-  },
-  {
-    "id": "p49",
-    "name": "Mônaco - Porto",
-    "lat": 43.7384,
-    "lng": 7.4246
-  },
-  {
-    "id": "p50",
-    "name": "Alpes Suíços - Chalé",
-    "lat": 46.8182,
-    "lng": 8.2275
-  },
-
-  {
-    "id": "p51",
-    "name": "Toscana - Vinhedos",
-    "lat": 43.7711,
-    "lng": 11.2486
-  },
-  {
-    "id": "p52",
-    "name": "Quebec - Cidade Antiga",
-    "lat": 46.8139,
-    "lng": -71.2082
-  },
-  {
-    "id": "p53",
-    "name": "Patagônia - Glaciar",
-    "lat": -50.9423,
-    "lng": -73.4068
-  },
-  {
-    "id": "p54",
-    "name": "Dubai - Safari no Deserto",
-    "lat": 25.2048,
-    "lng": 55.2708
-  },
-  {
-    "id": "p55",
-    "name": "Caribe - Praia Azul",
-    "lat": 18.2208,
-    "lng": -66.5901
-  },
-
-  {
-    "id": "p56",
-    "name": "Sardenha - Costa",
-    "lat": 40.1209,
-    "lng": 9.0129
-  },
-  {
-    "id": "p57",
-    "name": "Polinésia Francesa - Bora Bora",
+    "id": 41,
+    "name": "Ilha de Bora Bora, Polinésia Francesa",
     "lat": -16.5004,
-    "lng": -151.7415
-  },
-  {
-    "id": "p58",
-    "name": "Amalfi - Vista Mar",
-    "lat": 40.6333,
-    "lng": 14.6021
-  },
-  {
-    "id": "p59",
-    "name": "Croácia - Dubrovnik",
-    "lat": 42.6507,
-    "lng": 18.0944
-  },
-  {
-    "id": "p60",
-    "name": "Escócia - Ilha Skye",
-    "lat": 57.2736,
-    "lng": -6.2155
-  },
-
-  {
-    "id": "p61",
-    "name": "Chile - Deserto do Atacama",
-    "lat": -24.5000,
-    "lng": -69.2500
-  },
-  {
-    "id": "p62",
-    "name": "Alasca - Glaciar",
-    "lat": 61.0167,
-    "lng": -149.7333
-  },
-  {
-    "id": "p63",
-    "name": "Nova Zelândia - Milford Sound",
-    "lat": -44.6167,
-    "lng": 167.8667
-  },
-  {
-    "id": "p64",
-    "name": "Austrália - Grande Barreira de Coral",
-    "lat": -18.2871,
-    "lng": 147.6992
-  },
-  {
-    "id": "p65",
-    "name": "Noruega - Fiordes",
-    "lat": 60.7957,
-    "lng": 7.5749
-  },
-
-  {
-    "id": "p66",
-    "name": "Viena - Palácio Schönbrunn",
-    "lat": 48.1845,
-    "lng": 16.3122,
-    "challenge": {
-      "type": "quiz",
-      "question": "Qual é o apelido de Viena?",
-      "options": ["Cidade Imperial","Cidade Eterna","Cidade das Luzes"],
-      "answer": "Cidade Imperial"
-    }
-  },
-  {
-    "id": "p67",
-    "name": "Budapeste - Banhos Termais",
-    "lat": 47.4979,
-    "lng": 19.0402,
-    "challenge": {
-      "type": "riddle",
-      "question": "Sou quente, mas não sou fogo. Sou relaxante, mas não sou música. O que sou?",
-      "answer": "Água termal"
-    }
-  },
-  {
-    "id": "p68",
-    "name": "Lisboa - Miradouro Secreto",
-    "lat": 38.7169,
-    "lng": -9.139
-  },
-  {
-    "id": "p69",
-    "name": "Porto - Caves do Vinho",
-    "lat": 41.1406,
-    "lng": -8.611
-  },
-  {
-    "id": "p70",
-    "name": "Ilhas Maldivas - Ilha Privada",
-    "lat": 3.2028,
-    "lng": 73.2207,
+    "lng": -151.7415,
     "challenge": {
       "type": "password",
-      "question": "Digite a senha para entrar no paraíso 🌴",
-      "answer": "felicidade"
-    }
-  },
-
-  {
-    "id": "p71",
-    "name": "Safari na Tanzânia",
-    "lat": -2.3333,
-    "lng": 34.8333,
-    "challenge": {
-      "type": "colorPick",
-      "question": "Escolha a cor do pôr do sol africano",
-      "options": ["orange","purple","blue"],
-      "answer": "orange"
+      "question": "Digite a palavra mágica deste paraíso 🏝️",
+      "answer": "laguna"
     }
   },
   {
-    "id": "p72",
-    "name": "Mônaco - Cassino",
-    "lat": 43.7384,
-    "lng": 7.4246,
-    "challenge": {
-      "type": "slider",
-      "question": "Acerte a aposta: ajuste para 70",
-      "answer": 70
-    }
-  },
-  {
-    "id": "p73",
-    "name": "Berlim - Muro Secreto",
-    "lat": 52.5200,
-    "lng": 13.4050,
-    "challenge": {
-      "type": "order",
-      "question": "Ordene estas palavras para formar uma frase romântica",
-      "options": ["Eu","você","amo"],
-      "answer": ["Eu","amo","você"]
-    }
-  },
-  {
-    "id": "p74",
-    "name": "Ilhas Gregas - Caverna do Amor",
-    "lat": 37.9838,
-    "lng": 23.7275,
-    "challenge": {
-      "type": "memory",
-      "question": "Encontre os pares de corações ❤️",
-      "cards": ["❤️","❤️","💙","💙","💚","💚","💛","💛"]
-    }
-  },
-  {
-    "id": "p75",
-    "name": "Mont Saint-Michel",
-    "lat": 48.636,
-    "lng": -1.5115,
+    "id": 42,
+    "name": "Ilha Páscoa, Chile",
+    "lat": -27.1127,
+    "lng": -109.3497,
     "challenge": {
       "type": "quiz",
-      "question": "Que mar cerca o Mont Saint-Michel?",
-      "options": ["Canal da Mancha","Mediterrâneo","Atlântico"],
-      "answer": "Canal da Mancha"
+      "question": "As estátuas gigantes da Ilha de Páscoa são chamadas de?",
+      "options": ["Moai", "Tiki", "Totem"],
+      "answer": "Moai"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Taj Mahal, Índia",
+    "lat": 27.1751,
+    "lng": 78.0421,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um monumento branco feito por amor, quem sou eu?",
+      "answer": "Taj Mahal"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Petra, Jordânia",
+    "lat": 30.3285,
+    "lng": 35.4444,
+    "challenge": {
+      "type": "password",
+      "question": "Qual é a cor predominante da cidade de Petra?",
+      "answer": "rosa"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Grande Barreira de Corais, Austrália",
+    "lat": -18.2871,
+    "lng": 147.6992,
+    "challenge": {
+      "type": "quiz",
+      "question": "A Grande Barreira de Corais é visível do espaço?",
+      "options": ["Sim", "Não"],
+      "answer": "Sim"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Deserto do Saara, África",
+    "lat": 23.4162,
+    "lng": 25.6628,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou o maior deserto quente do mundo. Quem sou eu?",
+      "answer": "Saara"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Aurora Boreal, Noruega",
+    "lat": 69.6496,
+    "lng": 18.9560,
+    "challenge": {
+      "type": "quiz",
+      "question": "O fenômeno Aurora Boreal ocorre devido a?",
+      "options": ["Explosões solares", "Chuvas de meteoros", "Erupções vulcânicas"],
+      "answer": "Explosões solares"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Stonehenge, Reino Unido",
+    "lat": 51.1789,
+    "lng": -1.8262,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a palavra 'megalito' para desbloquear",
+      "answer": "megalito"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Niagara Falls, Canadá/EUA",
+    "lat": 43.0962,
+    "lng": -79.0377,
+    "challenge": {
+      "type": "quiz",
+      "question": "As Cataratas do Niágara ficam entre quais países?",
+      "options": ["EUA e México", "Canadá e EUA", "Canadá e Reino Unido"],
+      "answer": "Canadá e EUA"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Montanha da Table, África do Sul",
+    "lat": -33.9628,
+    "lng": 18.4098,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou uma montanha com topo plano na Cidade do Cabo. Quem sou eu?",
+      "answer": "Table Mountain"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Ilhas Galápagos, Equador",
+    "lat": -0.9538,
+    "lng": -90.9656,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'Darwin' para desbloquear",
+      "answer": "Darwin"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Muralha da China, China",
+    "lat": 40.4319,
+    "lng": 116.5704,
+    "challenge": {
+      "type": "quiz",
+      "question": "A Muralha da China é visível do espaço?",
+      "options": ["Sim", "Não"],
+      "answer": "Não"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Monte Kilimanjaro, Tanzânia",
+    "lat": -3.0674,
+    "lng": 37.3556,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou a montanha mais alta da África. Quem sou eu?",
+      "answer": "Kilimanjaro"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Parque Yellowstone, EUA",
+    "lat": 44.4280,
+    "lng": -110.5885,
+    "challenge": {
+      "type": "quiz",
+      "question": "Yellowstone é famoso por seus?",
+      "options": ["Gêiseres", "Glaciares", "Vulcões"],
+      "answer": "Gêiseres"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Monte Everest, Nepal",
+    "lat": 27.9881,
+    "lng": 86.9250,
+    "challenge": {
+      "type": "password",
+      "question": "Digite '8848' (altura do Everest)",
+      "answer": "8848"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Rio Amazonas, Brasil",
+    "lat": -3.4653,
+    "lng": -62.2159,
+    "challenge": {
+      "type": "quiz",
+      "question": "O Amazonas é o maior rio do mundo em?",
+      "options": ["Extensão", "Volume de água"],
+      "answer": "Volume de água"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Grand Canyon, EUA",
+    "lat": 36.1069,
+    "lng": -112.1129,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um enorme desfiladeiro esculpido pelo Rio Colorado. Quem sou eu?",
+      "answer": "Grand Canyon"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Chichen Itzá, México",
+    "lat": 20.6843,
+    "lng": -88.5678,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'kukulkan' para desbloquear",
+      "answer": "kukulkan"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Monte Fuji, Japão",
+    "lat": 35.3606,
+    "lng": 138.7274,
+    "challenge": {
+      "type": "quiz",
+      "question": "O Monte Fuji é um?",
+      "options": ["Vulcão ativo", "Montanha de gelo"],
+      "answer": "Vulcão ativo"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Cataratas do Iguaçu, Brasil",
+    "lat": -25.6953,
+    "lng": -54.4367,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um conjunto de quedas d'água na fronteira Brasil/Argentina. Quem sou eu?",
+      "answer": "Iguaçu"
+    }
+  },
+  {
+    "id": 61,
+    "name": "Deserto de Atacama, Chile",
+    "lat": -24.5000,
+    "lng": -69.2500,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'salar' para desbloquear",
+      "answer": "salar"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Monte Cook, Nova Zelândia",
+    "lat": -43.5950,
+    "lng": 170.1410,
+    "challenge": {
+      "type": "quiz",
+      "question": "Monte Cook é o mais alto da Nova Zelândia?",
+      "options": ["Sim", "Não"],
+      "answer": "Sim"
+    }
+  },
+  {
+    "id": 63,
+    "name": "Parque Kruger, África do Sul",
+    "lat": -23.9884,
+    "lng": 31.5547,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um parque famoso por safáris. Quem sou eu?",
+      "answer": "Kruger"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Templo de Angkor Wat, Camboja",
+    "lat": 13.4125,
+    "lng": 103.8670,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'Khmer' para desbloquear",
+      "answer": "Khmer"
+    }
+  },
+  {
+    "id": 65,
+    "name": "Monte Roraima, Brasil/Venezuela",
+    "lat": 5.1416,
+    "lng": -60.7622,
+    "challenge": {
+      "type": "quiz",
+      "question": "O Monte Roraima é famoso por?",
+      "options": ["Formatos únicos de rocha", "Neve eterna"],
+      "answer": "Formatos únicos de rocha"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Parque Torres del Paine, Chile",
+    "lat": -51.2000,
+    "lng": -72.3000,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um parque com torres de granito no Chile. Quem sou eu?",
+      "answer": "Torres del Paine"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Lago Baikal, Rússia",
+    "lat": 53.5587,
+    "lng": 108.1650,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'Sibéria' para desbloquear",
+      "answer": "Sibéria"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Monte Denali, Alasca",
+    "lat": 63.0695,
+    "lng": -151.0074,
+    "challenge": {
+      "type": "quiz",
+      "question": "Denali é o nome nativo de qual montanha?",
+      "options": ["McKinley", "Everest", "Kilimanjaro"],
+      "answer": "McKinley"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Ilhas Lofoten, Noruega",
+    "lat": 68.2298,
+    "lng": 13.8370,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou um arquipélago na Noruega famoso por paisagens dramáticas. Quem sou eu?",
+      "answer": "Lofoten"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Deserto Branco, Egito",
+    "lat": 27.3408,
+    "lng": 28.1426,
+    "challenge": {
+      "type": "password",
+      "question": "Digite 'calcário' para desbloquear",
+      "answer": "calcário"
     }
   }
 ]
