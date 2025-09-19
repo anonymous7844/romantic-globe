@@ -1,7 +1,6 @@
-// Nome do cache
-const CACHE_NAME = 'romantic-map-v1';
+// Service Worker — cache offline para o PWA
 
-// Arquivos que serão colocados no cache (adicione aqui se criar mais)
+const CACHE_NAME = 'romantic-map-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -12,7 +11,7 @@ const urlsToCache = [
   '/manifest.json'
 ];
 
-// Instala o service worker e faz o pré-cache
+// Instala e faz pré-cache
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -27,36 +26,27 @@ self.addEventListener('activate', event => {
     caches.keys().then(keys =>
       Promise.all(
         keys.map(key => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
+          if (key !== CACHE_NAME) return caches.delete(key);
         })
       )
     ).then(() => self.clients.claim())
   );
 });
 
-// Intercepta requisições para servir do cache offline
+// Intercepta requisições GET
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
     caches.match(event.request).then(response => {
-      // se tiver no cache, usa
       if (response) return response;
-
-      // senão, busca na rede e salva no cache
       return fetch(event.request).then(networkResponse => {
-        if (!networkResponse || networkResponse.status !== 200) {
-          return networkResponse;
-        }
+        if (!networkResponse || networkResponse.status !== 200) return networkResponse;
         const responseClone = networkResponse.clone();
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseClone);
-        });
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseClone));
         return networkResponse;
       }).catch(() => {
-        // pode retornar uma página fallback aqui se quiser
+        // Fallback opcional
       });
     })
   );
