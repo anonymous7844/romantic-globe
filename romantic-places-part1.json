@@ -1,243 +1,164 @@
 [
   {
     "id": 1,
-    "name": "Paris, França",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "customMessage": "O charme eterno da Torre Eiffel ❤️"
+    "name": "Paris - Torre Eiffel",
+    "lat": 48.8584,
+    "lng": 2.2945
   },
   {
     "id": 2,
-    "name": "Veneza, Itália",
+    "name": "Veneza - Grande Canal",
     "lat": 45.4408,
     "lng": 12.3155
   },
   {
     "id": 3,
-    "name": "Santorini, Grécia",
-    "lat": 36.3932,
-    "lng": 25.4615
+    "name": "Santorini - Oia",
+    "lat": 36.4619,
+    "lng": 25.3753
   },
   {
     "id": 4,
-    "name": "Machu Picchu, Peru",
-    "lat": -13.1631,
-    "lng": -72.5450
-  },
-  {
-    "id": 5,
-    "name": "Quioto, Japão",
+    "name": "Kyoto - Jardim Kiyomizu",
     "lat": 35.0116,
     "lng": 135.7681
   },
   {
-    "id": 6,
-    "name": "Bali, Indonésia",
-    "lat": -8.3405,
-    "lng": 115.0920
+    "id": 5,
+    "name": "Bali - Templo Uluwatu",
+    "lat": -8.817,
+    "lng": 115.087
   },
   {
-    "id": 7,
-    "name": "Ilhas Maldivas",
+    "id": 6,
+    "name": "Maldivas - Praia Privativa",
     "lat": 3.2028,
     "lng": 73.2207
   },
   {
+    "id": 7,
+    "name": "Havaí - Praia de Lanikai",
+    "lat": 21.4001,
+    "lng": -157.7166
+  },
+  {
     "id": 8,
-    "name": "Havaí, EUA",
-    "lat": 19.8968,
-    "lng": -155.5828
+    "name": "Roma - Fontana di Trevi",
+    "lat": 41.9009,
+    "lng": 12.4833
   },
   {
     "id": 9,
-    "name": "Bariloche, Argentina",
-    "lat": -41.1335,
-    "lng": -71.3103
+    "name": "Bruges - Lago do Amor",
+    "lat": 51.2089,
+    "lng": 3.2242
   },
   {
     "id": 10,
-    "name": "Campos do Jordão, Brasil",
-    "lat": -22.7383,
-    "lng": -45.5927
+    "name": "Praga - Ponte Carlos",
+    "lat": 50.0865,
+    "lng": 14.4114
   },
+
+  /* ---------- Bloqueados com desafio ---------- */
   {
     "id": 11,
-    "name": "Lago Como, Itália",
-    "lat": 46.0160,
-    "lng": 9.2572
+    "name": "Ilhas Seychelles - Anse Lazio",
+    "lat": -4.3185,
+    "lng": 55.7074,
+    "challenge": {
+      "type": "riddle",
+      "question": "Sou azul, infinito e calmo; onde estou?",
+      "answer": "mar"
+    }
   },
   {
     "id": 12,
-    "name": "Praga, República Tcheca",
-    "lat": 50.0755,
-    "lng": 14.4378
+    "name": "Patagônia - Glaciar Perito Moreno",
+    "lat": -50.497,
+    "lng": -73.045,
+    "challenge": {
+      "type": "quiz",
+      "question": "Qual país abriga este glaciar?",
+      "options": ["Chile","Argentina","Bolívia"],
+      "answer": "Argentina"
+    }
   },
   {
     "id": 13,
-    "name": "Lucerna, Suíça",
-    "lat": 47.0502,
-    "lng": 8.3093
+    "name": "Islândia - Lago Azul",
+    "lat": 63.879,
+    "lng": -22.449,
+    "challenge": {
+      "type": "password",
+      "question": "Digite a senha secreta para entrar",
+      "answer": "romance"
+    }
   },
   {
     "id": 14,
-    "name": "Seul, Coreia do Sul",
-    "lat": 37.5665,
-    "lng": 126.9780
+    "name": "Ilhas Fiji - Blue Lagoon",
+    "lat": -16.7,
+    "lng": 179.0,
+    "challenge": {
+      "type": "colorPick",
+      "question": "Escolha a cor do mar das Fiji",
+      "options": ["blue","green","red"],
+      "answer": "blue"
+    }
   },
   {
     "id": 15,
-    "name": "Nova York, EUA",
-    "lat": 40.7128,
-    "lng": -74.0060
+    "name": "Nova Zelândia - Hobbiton",
+    "lat": -37.872,
+    "lng": 175.682,
+    "challenge": {
+      "type": "order",
+      "question": "Ordene as palavras para entrar",
+      "options": ["love","and","peace"],
+      "answer": ["love","and","peace"]
+    }
   },
   {
     "id": 16,
-    "name": "Dubai, Emirados Árabes",
-    "lat": 25.2048,
-    "lng": 55.2708
+    "name": "Suíça - Lago de Lucerna",
+    "lat": 47.0502,
+    "lng": 8.3093,
+    "challenge": {
+      "type": "slider",
+      "question": "Ajuste o slider para 50",
+      "answer": 50
+    }
   },
   {
     "id": 17,
-    "name": "Capadócia, Turquia",
-    "lat": 38.6431,
-    "lng": 34.8353
+    "name": "Peru - Machu Picchu ao entardecer",
+    "lat": -13.1631,
+    "lng": -72.545,
+    "challenge": {
+      "type": "memory",
+      "question": "Combine os pares corretos",
+      "cards": ["💖","💖","🌹","🌹","🌊","🌊"]
+    }
   },
+
+  /* --- continue adicionando lugares livres/bloqueados neste formato --- */
   {
     "id": 18,
-    "name": "Ilhas Fiji",
-    "lat": -17.7134,
-    "lng": 178.0650
+    "name": "Amsterdã - Canais",
+    "lat": 52.3731,
+    "lng": 4.8922
   },
   {
     "id": 19,
-    "name": "Serengeti, Tanzânia",
-    "lat": -2.3333,
-    "lng": 34.8333
+    "name": "Londres - Hyde Park",
+    "lat": 51.5073,
+    "lng": -0.1657
   },
   {
     "id": 20,
-    "name": "Ilhas Seychelles",
-    "lat": -4.6796,
-    "lng": 55.4920
-  },
-  {
-    "id": 21,
-    "name": "Viena, Áustria",
-    "lat": 48.2082,
-    "lng": 16.3738
-  },
-  {
-    "id": 22,
-    "name": "Amsterdã, Holanda",
-    "lat": 52.3676,
-    "lng": 4.9041
-  },
-  {
-    "id": 23,
-    "name": "Ilhas Cook",
-    "lat": -21.2367,
-    "lng": -159.7777
-  },
-  {
-    "id": 24,
-    "name": "Taiti, Polinésia Francesa",
-    "lat": -17.6509,
-    "lng": -149.4260
-  },
-  {
-    "id": 25,
-    "name": "Islândia (Aurora Boreal)",
-    "lat": 64.9631,
-    "lng": -19.0208
-  },
-  {
-    "id": 26,
-    "name": "Cairo, Egito",
-    "lat": 30.0444,
-    "lng": 31.2357
-  },
-  {
-    "id": 27,
-    "name": "Costa Amalfitana, Itália",
-    "lat": 40.6340,
-    "lng": 14.6020
-  },
-  {
-    "id": 28,
-    "name": "Londres, Reino Unido",
-    "lat": 51.5074,
-    "lng": -0.1278
-  },
-  {
-    "id": 29,
-    "name": "Jerusalém, Israel",
-    "lat": 31.7683,
-    "lng": 35.2137
-  },
-  {
-    "id": 30,
-    "name": "Buenos Aires, Argentina",
-    "lat": -34.6037,
-    "lng": -58.3816
-  },
-  {
-    "id": 31,
-    "name": "Cusco, Peru",
-    "lat": -13.5319,
-    "lng": -71.9675
-  },
-  {
-    "id": 32,
-    "name": "Florença, Itália",
-    "lat": 43.7696,
-    "lng": 11.2558
-  },
-  {
-    "id": 33,
-    "name": "Las Vegas, EUA",
-    "lat": 36.1699,
-    "lng": -115.1398
-  },
-  {
-    "id": 34,
-    "name": "Phuket, Tailândia",
-    "lat": 7.8804,
-    "lng": 98.3923
-  },
-  {
-    "id": 35,
-    "name": "Hong Kong",
-    "lat": 22.3193,
-    "lng": 114.1694
-  },
-  {
-    "id": 36,
-    "name": "Xangai, China",
-    "lat": 31.2304,
-    "lng": 121.4737
-  },
-  {
-    "id": 37,
-    "name": "Munique, Alemanha",
-    "lat": 48.1351,
-    "lng": 11.5820
-  },
-  {
-    "id": 38,
-    "name": "Roma, Itália",
-    "lat": 41.9028,
-    "lng": 12.4964
-  },
-  {
-    "id": 39,
-    "name": "Los Angeles, EUA",
-    "lat": 34.0522,
-    "lng": -118.2437
-  },
-  {
-    "id": 40,
-    "name": "Toronto, Canadá",
-    "lat": 43.6532,
-    "lng": -79.3832
+    "name": "Barcelona - Parque Güell",
+    "lat": 41.4145,
+    "lng": 2.1527
   }
 ]
