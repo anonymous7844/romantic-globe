@@ -1,27 +1,36 @@
-// /api/deepseek.js
+// api/deepseek.js
+// Função serverless no Vercel para gerar mensagem com Deepseek (ou outra IA)
+
+import fetch from 'node-fetch';
+
 export default async function handler(req, res) {
-  const { prompt } = req.query;
+  const prompt = req.query.prompt || 'mensagem romântica';
+  const apiKey = process.env.DEEPSEEK_API_KEY; // configure no Vercel
+
   try {
-    // Se você tem uma chave Deepseek, configure-a como variável de ambiente no Vercel:
-    // Settings > Environment Variables > DEEPSEEK_API_KEY
-    const key = process.env.DEEPSEEK_API_KEY;
-    if (!key) {
-      // fallback se não tiver chave
+    if (!apiKey) {
+      // fallback: apenas retorna uma frase simples se não tiver chave
       return res.status(200).json({ message: `Um lugar romântico chamado ${prompt} ❤️` });
     }
 
-    // Exemplo de chamada à API Deepseek (ajuste ao formato real da sua API)
-    const resp = await fetch('https://api.deepseek.com/v1/generate', {
+    // Exemplo de chamada (ajuste conforme seu provedor)
+    const resp = await fetch('https://api.deepseek.com/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${key}`
+        'Authorization': `Bearer ${apiKey}`
       },
-      body: JSON.stringify({ prompt })
+      body: JSON.stringify({
+        prompt,
+        max_tokens: 40
+      })
     });
     const data = await resp.json();
-    res.status(200).json({ message: data.message || `Um lugar romântico chamado ${prompt} ❤️` });
+
+    return res.status(200).json({
+      message: data?.text || `Um lugar romântico chamado ${prompt} ❤️`
+    });
   } catch (err) {
-    res.status(500).json({ error: 'Erro ao gerar mensagem' });
+    return res.status(200).json({ message: `Um lugar romântico chamado ${prompt} ❤️` });
   }
 }
